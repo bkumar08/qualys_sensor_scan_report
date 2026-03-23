@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVE Comparison: Trivy vs QScanner — 2026-03-23 19:19:51 UTC</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            padding: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<table border="0" cellpadding="16" cellspacing="0" width="100%"
+       style="border-collapse:collapse;background:linear-gradient(135deg,#1a237e,#283593);border-radius:12px;margin-bottom:20px;">
+    <tr>
+        <td>
+            <font color="#ffffff" style="font-size:22px;"><b>CVE Comparison Report: Trivy vs QScanner</b></font><br>
+            <font color="#cccccc" style="font-size:13px;">Generated: 2026-03-23 19:19:51 UTC &nbsp;|&nbsp; Images: 5</font>
+        </td>
+    </tr>
+</table>
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%"
+       style="border-collapse:collapse;border:1px solid #c5d5ff;margin-bottom:20px;">
+    <tr bgcolor="#e8f0fe">
+        <td colspan="5" style="padding:12px;">
+            <b style="font-size:15px;"><font color="#1a56db">Overall Summary</font></b>
+        </td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td align="center" width="20%">
+            <b style="font-size:24px;"><font color="#2e7d32">39</font></b><br>
+            <font color="#555" style="font-size:12px;">Both Scanners</font>
+        </td>
+        <td align="center" width="20%">
+            <b style="font-size:24px;"><font color="#1565c0">51</font></b><br>
+            <font color="#555" style="font-size:12px;">Trivy Only</font>
+        </td>
+        <td align="center" width="20%">
+            <b style="font-size:24px;"><font color="#e65100">0</font></b><br>
+            <font color="#555" style="font-size:12px;">QScanner Only</font>
+        </td>
+        <td align="center" width="20%">
+            <b style="font-size:24px;"><font color="#333">90</font></b><br>
+            <font color="#555" style="font-size:12px;">Total Unique CVEs</font>
+        </td>
+        <td align="center" width="20%">
+            <b style="font-size:24px;"><font color="#6a1b9a">5</font></b><br>
+            <font color="#555" style="font-size:12px;">Images Scanned</font>
+        </td>
+    </tr>
+</table>
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%"
+       style="border-collapse:collapse;border:1px solid #ddd;margin-bottom:16px;font-size:13px;">
+    <tr bgcolor="#e8eaf6">
+        <td width="20%"><b>Image</b></td>
+        <td align="center" width="12%"><b>Trivy CVEs</b></td>
+        <td align="center" width="12%"><b>QScanner CVEs</b></td>
+        <td align="center" width="12%"><b><font color="#2e7d32">Both</font></b></td>
+        <td align="center" width="15%"><b><font color="#1565c0">Trivy Only</font></b></td>
+        <td align="center" width="15%"><b><font color="#e65100">QScanner Only</font></b></td>
+        <td align="center" width="14%"><b>Coverage Match</b></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td><b>qcs-sensor:latest</b></td>
+        <td align="center">11</td>
+        <td align="center">4</td>
+        <td align="center"><b><font color="#2e7d32">4</font></b></td>
+        <td align="center"><font color="#1565c0">7</font></td>
+        <td align="center"><font color="#e65100">0</font></td>
+        <td align="center"><b>36%</b></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td><b>runtime-sensor:latest</b></td>
+        <td align="center">29</td>
+        <td align="center">8</td>
+        <td align="center"><b><font color="#2e7d32">8</font></b></td>
+        <td align="center"><font color="#1565c0">21</font></td>
+        <td align="center"><font color="#e65100">0</font></td>
+        <td align="center"><b>28%</b></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td><b>cluster-sensor:latest</b></td>
+        <td align="center">26</td>
+        <td align="center">14</td>
+        <td align="center"><b><font color="#2e7d32">14</font></b></td>
+        <td align="center"><font color="#1565c0">12</font></td>
+        <td align="center"><font color="#e65100">0</font></td>
+        <td align="center"><b>54%</b></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td><b>qscanner:latest</b></td>
+        <td align="center">4</td>
+        <td align="center">3</td>
+        <td align="center"><b><font color="#2e7d32">3</font></b></td>
+        <td align="center"><font color="#1565c0">1</font></td>
+        <td align="center"><font color="#e65100">0</font></td>
+        <td align="center"><b>75%</b></td>
+    </tr>
+    <tr bgcolor="#ffffff">
+        <td><b>admission-controller:latest</b></td>
+        <td align="center">20</td>
+        <td align="center">10</td>
+        <td align="center"><b><font color="#2e7d32">10</font></b></td>
+        <td align="center"><font color="#1565c0">10</font></td>
+        <td align="center"><font color="#e65100">0</font></td>
+        <td align="center"><b>50%</b></td>
+    </tr>
+</table>
+
+<table border="1" cellpadding="6" cellspacing="0" width="100%"
+       style="border-collapse:collapse;font-size:13px;">
+    <thead>
+        <tr bgcolor="#37474f">
+            <th style="padding:10px;" align="center" width="14%"><font color="#ffffff">CVE</font></th>
+            <th style="padding:10px;" align="center" width="10%"><font color="#ffffff">Severity</font></th>
+            <th style="padding:10px;" width="22%"><font color="#ffffff">Package / Software</font></th>
+            <th style="padding:10px;" width="14%"><font color="#ffffff">Installed</font></th>
+            <th style="padding:10px;" width="14%"><font color="#ffffff">Fixed</font></th>
+            <th style="padding:10px;" align="center" width="8%"><font color="#ffffff">Trivy</font></th>
+            <th style="padding:10px;" align="center" width="8%"><font color="#ffffff">QScanner</font></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr bgcolor="#1a237e">
+            <td colspan="7" style="padding:12px;">
+                <font color="#ffffff"><b>qualys/qcs-sensor:latest</b></font>
+                <font color="#ccc"> &nbsp;|&nbsp; Trivy: 11 unique CVEs &nbsp;|&nbsp;
+                QScanner: 4 unique CVEs &nbsp;|&nbsp;
+                Common: 4 &nbsp;|&nbsp;
+                Trivy-only: 7 &nbsp;|&nbsp;
+                QScanner-only: 0</font>
+            </td>
+        </tr>
+        
+            <tr bgcolor="#e8f5e9">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#2e7d32">&#10003; Found by Both Scanners (4)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-13281</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>k8s.io/kubernetes</td>
+                <td><code>v1.34.1</code></td>
+                <td><code>1.32.10, 1.33.6, 1.34.2</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-15558</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>github.com/docker/cli</td>
+                <td><code>v28.4.0+incompatible</code></td>
+                <td><code>29.2.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-1229</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>github.com/cloudflare/circl</td>
+                <td><code>v1.6.1</code></td>
+                <td><code>1.6.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-24051</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>go.opentelemetry.io/otel/sdk</td>
+                <td><code>v1.38.0</code></td>
+                <td><code>1.40.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#e3f2fd">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#1565c0">&#9650; Trivy Only (7)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-33186</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>google.golang.org/grpc</td>
+                <td><code>v1.76.0</code></td>
+                <td><code>1.79.3</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-52881</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>github.com/opencontainers/selinux</td>
+                <td><code>v1.12.0</code></td>
+                <td><code>1.13.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-25679</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.26.0</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27137</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.26.0</code></td>
+                <td><code>1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27142</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.26.0</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27138</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.26.0</code></td>
+                <td><code>1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27139</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.26.0</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr><td colspan="7" style="padding:4px;border:none;"></td></tr>
+        <tr bgcolor="#1a237e">
+            <td colspan="7" style="padding:12px;">
+                <font color="#ffffff"><b>qualys/runtime-sensor:latest</b></font>
+                <font color="#ccc"> &nbsp;|&nbsp; Trivy: 29 unique CVEs &nbsp;|&nbsp;
+                QScanner: 8 unique CVEs &nbsp;|&nbsp;
+                Common: 8 &nbsp;|&nbsp;
+                Trivy-only: 21 &nbsp;|&nbsp;
+                QScanner-only: 0</font>
+            </td>
+        </tr>
+        
+            <tr bgcolor="#e8f5e9">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#2e7d32">&#10003; Found by Both Scanners (8)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-13601</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>glib2</td>
+                <td><code>2.56.4-167.el8_10</code></td>
+                <td><code>2.56.4-168.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-14104</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>libblkid</td>
+                <td><code>2.32.1-47.0.1.el8_10</code></td>
+                <td><code>2.32.1-48.0.1.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-22870</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>golang.org/x/net</td>
+                <td><code>v0.33.0</code></td>
+                <td><code>0.36.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-58058</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/ulikunitz/xz</td>
+                <td><code>v0.5.12</code></td>
+                <td><code>0.5.15</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-6176</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>brotli</td>
+                <td><code>1.0.6-3.el8</code></td>
+                <td><code>1.0.6-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68121</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.13, 1.25.7, 1.26.0-rc.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68973</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>gnupg2</td>
+                <td><code>2.2.20-3.el8_6</code></td>
+                <td><code>2.2.20-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-69419</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>openssl-libs</td>
+                <td><code>1:1.1.1k-14.el8_10</code></td>
+                <td><code>1:1.1.1k-15.el8_6</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#e3f2fd">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#1565c0">&#9650; Trivy Only (21)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-33186</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>google.golang.org/grpc</td>
+                <td><code>v1.68.1</code></td>
+                <td><code>1.79.3</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-22868</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>golang.org/x/oauth2</td>
+                <td><code>v0.23.0</code></td>
+                <td><code>0.27.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58183</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61726</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61728</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61729</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.11, 1.25.5</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-25679</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-22872</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>golang.org/x/net</td>
+                <td><code>v0.33.0</code></td>
+                <td><code>0.38.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-47912</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58185</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58186</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58187</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.9, 1.25.3</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58188</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-58189</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61723</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61724</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61725</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.8, 1.25.2</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61727</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.11, 1.25.5</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61730</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27142</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27139</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.1</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr><td colspan="7" style="padding:4px;border:none;"></td></tr>
+        <tr bgcolor="#1a237e">
+            <td colspan="7" style="padding:12px;">
+                <font color="#ffffff"><b>qualys/cluster-sensor:latest</b></font>
+                <font color="#ccc"> &nbsp;|&nbsp; Trivy: 26 unique CVEs &nbsp;|&nbsp;
+                QScanner: 14 unique CVEs &nbsp;|&nbsp;
+                Common: 14 &nbsp;|&nbsp;
+                Trivy-only: 12 &nbsp;|&nbsp;
+                QScanner-only: 0</font>
+            </td>
+        </tr>
+        
+            <tr bgcolor="#e8f5e9">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#2e7d32">&#10003; Found by Both Scanners (14)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-13601</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>glib2</td>
+                <td><code>2.56.4-167.el8_10</code></td>
+                <td><code>2.56.4-168.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-14104</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>libblkid</td>
+                <td><code>2.32.1-47.0.1.el8_10</code></td>
+                <td><code>2.32.1-48.0.1.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-15558</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>github.com/docker/cli</td>
+                <td><code>v29.0.3+incompatible</code></td>
+                <td><code>29.2.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-6176</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>brotli</td>
+                <td><code>1.0.6-3.el8</code></td>
+                <td><code>1.0.6-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68121</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.24.13, 1.25.7, 1.26.0-rc.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68973</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>gnupg2</td>
+                <td><code>2.2.20-3.el8_6</code></td>
+                <td><code>2.2.20-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-69419</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>openssl-libs</td>
+                <td><code>1:1.1.1k-14.el8_10</code></td>
+                <td><code>1:1.1.1k-15.el8_6</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-1229</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>github.com/cloudflare/circl</td>
+                <td><code>v1.6.1</code></td>
+                <td><code>1.6.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-22772</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/sigstore/fulcio</td>
+                <td><code>v1.8.3</code></td>
+                <td><code>1.8.5</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-24051</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>go.opentelemetry.io/otel/sdk</td>
+                <td><code>v1.38.0</code></td>
+                <td><code>1.40.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-24137</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/sigstore/sigstore</td>
+                <td><code>v1.10.0</code></td>
+                <td><code>1.10.4</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-24686</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/theupdateframework/go-tuf/v2</td>
+                <td><code>v2.3.0</code></td>
+                <td><code>2.4.1</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-25934</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/go-git/go-git/v5</td>
+                <td><code>v5.16.3</code></td>
+                <td><code>5.16.5</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-26963</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/cilium/cilium</td>
+                <td><code>v1.18.4</code></td>
+                <td><code>1.18.6</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#e3f2fd">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#1565c0">&#9650; Trivy Only (12)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-33186</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>google.golang.org/grpc</td>
+                <td><code>v1.77.0</code></td>
+                <td><code>1.79.3</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61726</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61728</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-25679</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61730</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-22703</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/sigstore/cosign/v3</td>
+                <td><code>v3.0.3</code></td>
+                <td><code>3.0.4</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-23831</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/sigstore/rekor</td>
+                <td><code>v1.4.3</code></td>
+                <td><code>1.5.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-23991</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/theupdateframework/go-tuf/v2</td>
+                <td><code>v2.3.0</code></td>
+                <td><code>2.3.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-23992</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/theupdateframework/go-tuf/v2</td>
+                <td><code>v2.3.0</code></td>
+                <td><code>2.3.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-24117</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/sigstore/rekor</td>
+                <td><code>v1.4.3</code></td>
+                <td><code>1.5.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27142</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27139</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.5</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr><td colspan="7" style="padding:4px;border:none;"></td></tr>
+        <tr bgcolor="#1a237e">
+            <td colspan="7" style="padding:12px;">
+                <font color="#ffffff"><b>qualys/qscanner:latest</b></font>
+                <font color="#ccc"> &nbsp;|&nbsp; Trivy: 4 unique CVEs &nbsp;|&nbsp;
+                QScanner: 3 unique CVEs &nbsp;|&nbsp;
+                Common: 3 &nbsp;|&nbsp;
+                Trivy-only: 1 &nbsp;|&nbsp;
+                QScanner-only: 0</font>
+            </td>
+        </tr>
+        
+            <tr bgcolor="#e8f5e9">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#2e7d32">&#10003; Found by Both Scanners (3)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-15558</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>github.com/docker/cli</td>
+                <td><code>v29.0.3+incompatible</code></td>
+                <td><code>29.2.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-1229</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>github.com/cloudflare/circl</td>
+                <td><code>v1.6.1</code></td>
+                <td><code>1.6.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2026-24051</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>go.opentelemetry.io/otel/sdk</td>
+                <td><code>v1.38.0</code></td>
+                <td><code>1.40.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#e3f2fd">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#1565c0">&#9650; Trivy Only (1)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-33186</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>google.golang.org/grpc</td>
+                <td><code>v1.78.0</code></td>
+                <td><code>1.79.3</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr><td colspan="7" style="padding:4px;border:none;"></td></tr>
+        <tr bgcolor="#1a237e">
+            <td colspan="7" style="padding:12px;">
+                <font color="#ffffff"><b>qualys/admission-controller:latest</b></font>
+                <font color="#ccc"> &nbsp;|&nbsp; Trivy: 20 unique CVEs &nbsp;|&nbsp;
+                QScanner: 10 unique CVEs &nbsp;|&nbsp;
+                Common: 10 &nbsp;|&nbsp;
+                Trivy-only: 10 &nbsp;|&nbsp;
+                QScanner-only: 0</font>
+            </td>
+        </tr>
+        
+            <tr bgcolor="#e8f5e9">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#2e7d32">&#10003; Found by Both Scanners (10)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-11065</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/go-viper/mapstructure/v2</td>
+                <td><code>v2.2.1</code></td>
+                <td><code>2.4.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-13601</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>glib2</td>
+                <td><code>2.56.4-167.el8_10</code></td>
+                <td><code>2.56.4-168.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-14104</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>libblkid</td>
+                <td><code>2.32.1-47.0.1.el8_10</code></td>
+                <td><code>2.32.1-48.0.1.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-54388</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/docker/docker</td>
+                <td><code>v28.3.2+incompatible</code></td>
+                <td><code>28.3.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-58058</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>github.com/ulikunitz/xz</td>
+                <td><code>v0.5.12</code></td>
+                <td><code>0.5.15</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-58181</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>golang.org/x/crypto</td>
+                <td><code>v0.40.0</code></td>
+                <td><code>0.45.0</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-6176</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>brotli</td>
+                <td><code>1.0.6-3.el8</code></td>
+                <td><code>1.0.6-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68121</b></code></td>
+                <td align="center" bgcolor="#fde8e8"><b><font color="#d32f2f">CRITICAL</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.13, 1.25.7, 1.26.0-rc.3</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-68973</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>gnupg2</td>
+                <td><code>2.2.20-3.el8_6</code></td>
+                <td><code>2.2.20-4.el8_10</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#ffffff">
+                <td align="center"><code><b>CVE-2025-69419</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>openssl-libs</td>
+                <td><code>1:1.1.1k-14.el8_10</code></td>
+                <td><code>1:1.1.1k-15.el8_6</code></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+                <td align="center"><b><font color="#2e7d32">&#10003;</font></b></td>
+            </tr>
+            <tr bgcolor="#e3f2fd">
+                <td colspan="7" style="padding:8px;">
+                    <b><font color="#1565c0">&#9650; Trivy Only (10)</font></b>
+                </td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-52881</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>github.com/opencontainers/selinux</td>
+                <td><code>v1.12.0</code></td>
+                <td><code>1.13.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61726</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61728</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61729</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.11, 1.25.5</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-25679</b></code></td>
+                <td align="center" bgcolor="#fff3e0"><b><font color="#f57c00">HIGH</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-47914</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>golang.org/x/crypto</td>
+                <td><code>v0.40.0</code></td>
+                <td><code>0.45.0</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61727</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.11, 1.25.5</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2025-61730</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.24.12, 1.25.6</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27142</b></code></td>
+                <td align="center" bgcolor="#fffde7"><b><font color="#fbc02d">MEDIUM</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr bgcolor="#f5f9ff">
+                <td align="center"><code><b>CVE-2026-27139</b></code></td>
+                <td align="center" bgcolor="#e8f5e9"><b><font color="#388e3c">LOW</font></b></td>
+                <td>stdlib</td>
+                <td><code>v1.25.3</code></td>
+                <td><code>1.25.8, 1.26.1</code></td>
+                <td align="center"><b><font color="#1565c0">&#10003;</font></b></td>
+                <td align="center"><font color="#bbb">&#10007;</font></td>
+            </tr>
+            <tr><td colspan="7" style="padding:4px;border:none;"></td></tr>
+    </tbody>
+</table>
+
+<table border="0" cellpadding="8" cellspacing="0" width="100%" style="margin-top:16px;">
+    <tr>
+        <td bgcolor="#f5f5f5" style="border-radius:6px;padding:12px;">
+            <b>Legend:</b> &nbsp;
+            <font color="#2e7d32"><b>&#10003;</b></font> = CVE detected &nbsp;&nbsp;
+            <font color="#bbb"><b>&#10007;</b></font> = Not detected &nbsp;&nbsp;|&nbsp;&nbsp;
+            <font color="#2e7d32"><b>Both</b></font> = Found by both scanners &nbsp;&nbsp;
+            <font color="#1565c0"><b>Trivy Only</b></font> = Trivy found, QScanner missed &nbsp;&nbsp;
+            <font color="#e65100"><b>QScanner Only</b></font> = QScanner found, Trivy missed
+        </td>
+    </tr>
+</table>
+
+<p style="text-align:center;color:#999;font-size:12px;margin-top:24px;">
+    Generated by Qualys Image Scanner — CVE Comparison &nbsp;|&nbsp; 2026-03-23 19:19:51 UTC
+</p>
+
+</body>
+</html>
