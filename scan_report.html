@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qualys Image Scan Report — 2026-03-23 18:54:17 UTC</title>
+    <title>Qualys Image Scan Report — 2026-03-23 19:08:15 UTC</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -103,7 +103,7 @@
     <div class="header">
         <h1>Qualys Docker Image Scan Report</h1>
         <div class="meta">
-            Generated: 2026-03-23 18:54:17 UTC &nbsp;|&nbsp; Images scanned: 5 &nbsp;|&nbsp;
+            Generated: 2026-03-23 19:08:15 UTC &nbsp;|&nbsp; Images scanned: 5 &nbsp;|&nbsp;
             Scanners: Trivy + Qualys QScanner
         </div>
     </div>
@@ -653,7 +653,354 @@
             <td align="center"><b>90 days</b></td>
             <td><font color="#d32f2f"><b>OVERDUE by 6 days</b></font></td>
         </tr></tbody>
-    </table></div>
+    </table></div><details style="margin-top:8px;"><summary style="cursor:pointer;font-weight:600;">QScanner Full Log (348 lines)</summary><pre style="max-height:500px;overflow:auto;background:#f9f9f9;padding:12px;border-radius:6px;font-size:11px;">Using logfile /root/qualys/qscanner/data/qscanner.log
+   ____    _____
+  / __ \  / ___/  _____  ____ _   ____    ____   ___    _____
+ / / / /  \__ \  / ___/ / __ `/  / __ \  / __ \ / _ \  / ___/
+/ /_/ /  ___/ / / /__  / /_/ /  / / / / / / / //  __/ / /
+\___\_\ /____/  \___/  \__,_/  /_/ /_/ /_/ /_/ \___/ /_/
+
+By Qualys | version: 4.8.0-3
+
+2026-03-23T19:05:33.638Z	INFO	New instance of qscanner-4.8.0-3 started with invocation ID e697b792-2ef4-4062-b6ae-64d5dcc2eb9e
+2026-03-23T19:05:33.638Z	DEBUG	Created process-specific temp directory: /tmp/qscanner-44114
+2026-03-23T19:05:33.638Z	DEBUG	Global Options: {
+    "LogLevel": "debug",
+    "SilentMode": false,
+    "FileLogging": true,
+    "BackendLogging": false,
+    "OutputDir": "/root/qualys/qscanner/data",
+    "TargetKind": "image",
+    "GatewayURL": "https://gateway.qg1.apps.qualys.com",
+    "AccessToken": "********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************",
+    "ClientID": "",
+    "ClientSecret": "",
+    "CacheAuthToken": false,
+    "CertPath": "",
+    "SkipTLSVerification": true,
+    "UseProxy": "",
+    "FragmentSizeInKB": 390,
+    "CacheDir": "/root/.cache/qualys/qscanner",
+    "RunProfiler": false,
+    "ShowPerfStat": false,
+    "PerfStatInterval": 1000000000,
+    "MaxNetworkRetries": 10,
+    "NetworkRetryWaitMin": 5000000000,
+    "NetworkRetryWaitMax": 120000000000,
+    "PerformVersionCheck": true
+}
+2026-03-23T19:05:33.639Z	DEBUG	Version check metadata loaded from /root/.cache/qualys/qscanner/version_check_metadata.json
+2026-03-23T19:05:33.639Z	INFO	Fetching image details
+2026-03-23T19:05:33.643Z	INFO	Image source: docker
+2026-03-23T19:05:33.643Z	INFO	Image present locally. Consider using '--storage-driver docker-overlay2' for faster scan
+2026-03-23T19:05:33.643Z	DEBUG	Image ID: 6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192
+2026-03-23T19:05:33.643Z	DEBUG	Layer SHAs:
+2026-03-23T19:05:33.643Z	DEBUG	 1) 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169
+2026-03-23T19:05:33.643Z	DEBUG	 2) 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195
+2026-03-23T19:05:33.643Z	DEBUG	 3) e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a
+2026-03-23T19:05:33.643Z	DEBUG	 4) 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb
+2026-03-23T19:05:33.643Z	DEBUG	 5) e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16
+2026-03-23T19:05:33.643Z	DEBUG	 6) b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf
+2026-03-23T19:05:33.643Z	DEBUG	 7) a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487
+2026-03-23T19:05:33.643Z	DEBUG	 8) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:05:33.643Z	DEBUG	 9) 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e
+2026-03-23T19:05:33.643Z	DEBUG	10) 9061d240e81be5376fb8c7413f7fc5ee92eb43f5ce50f6ad5c24f86abd025032
+2026-03-23T19:05:33.643Z	DEBUG	11) dfceb56c1c97f55b9fecf820738c1f7d80d2525d7a9ef6966c50984541d39f48
+2026-03-23T19:05:33.643Z	DEBUG	12) 7f2aca4bea48e7eaede4910813b48c8b7b248c0460ec7f28d3d462b045d1ee0c
+2026-03-23T19:05:33.644Z	DEBUG	13) 4eb657a200e4951ac84dad8faea714335c97943d9c291c8c5f0c7498ce5b05a0
+2026-03-23T19:05:33.644Z	DEBUG	14) 0701d8edfcd1ca6761273edc97cfedfa61ad0accfc1bf0cf7e4e59e7e386e26d
+2026-03-23T19:05:33.644Z	DEBUG	15) 4066e38f7afc486edcbe65178c19d2f2744f21d5d207e170ebfce042ec76c30c
+2026-03-23T19:05:33.644Z	DEBUG	16) 7041098104f722a770ddd8b3a679a060e812a8013f0e80be94fd2b9fa2f6336b
+2026-03-23T19:05:33.644Z	DEBUG	17) 9684635e4f4526295b44a7a58fbaa852028bde75f99c393a13d2978d7122afcf
+2026-03-23T19:05:33.644Z	DEBUG	18) 533482174cecca42283609ca8ded7f534c9e87f17a2f56f25489e476f57da21d
+2026-03-23T19:05:33.644Z	DEBUG	19) 74d5dcadbbbc0deb25e7702fb9be44c7b0a20b899244201942744580a15d4343
+2026-03-23T19:05:33.644Z	DEBUG	20) 188a2a7d2c344f58e3e76da65fdbf8fbb5e15fc3dce692c9c37540f61f503ba2
+2026-03-23T19:05:33.644Z	DEBUG	21) e9f914f0be8f8944a657c5f2fa3ae32ad3f9122c189848eefaf7f05e370fa0a6
+2026-03-23T19:05:33.644Z	DEBUG	22) 2187a88e3cad17046f3ab5d00aee0a0fcb7a2d132017fc9544d39649403707c0
+2026-03-23T19:05:33.644Z	DEBUG	23) 4e84dc92cf0013fb3b5de79e4826dbc46199667aee88ce7aa128db8b641ea76d
+2026-03-23T19:05:33.644Z	DEBUG	24) 8d4bc10a631841f969a6fda139b6a818301f5e9529a255cd703b9a31e7614892
+2026-03-23T19:05:33.644Z	DEBUG	25) 2dba662b3ac9baecc52d86e7669a9fd562d248447598a0ddcb417059720a8e54
+2026-03-23T19:05:33.644Z	DEBUG	Waiting to access local cache DB
+2026-03-23T19:05:33.646Z	DEBUG	Using local cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:05:33.646Z	DEBUG	Target [image] created for [qualys/qcs-sensor:latest], with following options:
+2026-03-23T19:05:33.646Z	DEBUG	Scan Options: {
+    "ScanTypes": [
+        "os",
+        "sca",
+        "fileinsight"
+    ],
+    "OutputFormats": [
+        "db",
+        "json",
+        "spdx"
+    ],
+    "ReportFormats": [
+        "table",
+        "sarif"
+    ],
+    "ExcludeDirs": [],
+    "ExcludeFiles": [],
+    "IncludeDirs": {},
+    "ScanTargetInfo": {},
+    "ShellCommands": {},
+    "ExitIfOSNotFound": false,
+    "ExitIfOSPkgNotFound": false,
+    "SecretConfigFile": "",
+    "SecretConfigRefreshDuration": 86400000000000,
+    "ForceSecretConfigRefresh": false,
+    "OfflineScan": false,
+    "SkipJavaDbUpdate": false,
+    "JavaDbUpdateIntervalInDays": 15,
+    "ScanTimeout": 300000000000,
+    "Mode": 30,
+    "PolicyTags": [],
+    "CacheType": "local",
+    "CacheCleanupDurationThreshold": 3888000000000000,
+    "CacheCleanupFrequency": 604800000000000,
+    "EnableCacheCleanup": true,
+    "DisabledSCALanguages": [],
+    "InputCacheFile": "",
+    "LimitResourceUsage": false,
+    "MultiVolume": false,
+    "MultiPartition": false,
+    "StorageDriver": "none",
+    "RegistryUsername": "",
+    "RegistryPassword": "",
+    "RegistryToken": "",
+    "AllowPartialScan": false,
+    "Platform": "",
+    "ManifestPath": "",
+    "DetectionPriority": "precise",
+    "QDSThreshold": -1,
+    "FileInsightConfigFile": "",
+    "WinRegistryConfigFile": "",
+    "MaskEnvVariables": false,
+    "ScanWritableLayerOnly": false,
+    "CollectBuildPipelineMetadata": false
+}
+2026-03-23T19:05:33.647Z	DEBUG	Registered Metadata Scanner
+2026-03-23T19:05:33.647Z	DEBUG	Registered OS Scanner
+2026-03-23T19:05:33.647Z	DEBUG	Registered SCA Scanner
+2026-03-23T19:05:33.647Z	DEBUG	Registered FileInsight Scanner
+2026-03-23T19:05:33.647Z	DEBUG	PreScan
+2026-03-23T19:05:33.647Z	DEBUG	Using built-in fileinsight-config
+2026-03-23T19:05:33.647Z	INFO	Starting Metadata scan
+2026-03-23T19:05:33.647Z	INFO	Metadata scan completed in 215.148µs
+2026-03-23T19:05:33.647Z	INFO	Starting [os sca fileinsight] scan
+2026-03-23T19:05:33.647Z	DEBUG	Base Layers:
+2026-03-23T19:05:33.647Z	DEBUG	 1) 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169
+2026-03-23T19:05:33.651Z	DEBUG	Skipping os scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:05:33.654Z	DEBUG	Skipping os scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:05:33.657Z	DEBUG	Skipping os scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:05:33.661Z	DEBUG	Skipping os scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:05:33.665Z	DEBUG	Skipping os scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:05:33.668Z	DEBUG	Skipping sca scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:05:33.672Z	DEBUG	Skipping fileinsight scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:05:33.675Z	DEBUG	Skipping sca scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:05:33.678Z	DEBUG	Skipping sca scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:05:33.681Z	DEBUG	Skipping sca scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:05:33.684Z	DEBUG	Skipping sca scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:05:33.689Z	DEBUG	Skipping fileinsight scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:05:33.692Z	DEBUG	Skipping fileinsight scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:05:33.695Z	DEBUG	Skipping fileinsight scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:05:33.697Z	DEBUG	Skipping fileinsight scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:05:33.731Z	DEBUG	Skipping os scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:05:33.745Z	DEBUG	Skipping sca scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:05:33.748Z	DEBUG	Skipping os scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:05:33.752Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:05:33.755Z	DEBUG	Skipping os scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:05:33.757Z	DEBUG	Skipping os scan for layer 9061d240e81be5376fb8c7413f7fc5ee92eb43f5ce50f6ad5c24f86abd025032. Already cached.
+2026-03-23T19:05:33.761Z	DEBUG	Skipping fileinsight scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:05:33.765Z	DEBUG	Skipping sca scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:05:33.768Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:05:33.771Z	DEBUG	Skipping sca scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:05:33.774Z	DEBUG	Skipping sca scan for layer 9061d240e81be5376fb8c7413f7fc5ee92eb43f5ce50f6ad5c24f86abd025032. Already cached.
+2026-03-23T19:05:33.780Z	DEBUG	Skipping fileinsight scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:05:33.784Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:05:33.786Z	DEBUG	Skipping fileinsight scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:05:33.790Z	DEBUG	Skipping fileinsight scan for layer 9061d240e81be5376fb8c7413f7fc5ee92eb43f5ce50f6ad5c24f86abd025032. Already cached.
+2026-03-23T19:05:33.820Z	DEBUG	Skipping os scan for layer dfceb56c1c97f55b9fecf820738c1f7d80d2525d7a9ef6966c50984541d39f48. Already cached.
+2026-03-23T19:05:33.835Z	DEBUG	Skipping sca scan for layer dfceb56c1c97f55b9fecf820738c1f7d80d2525d7a9ef6966c50984541d39f48. Already cached.
+2026-03-23T19:05:33.837Z	DEBUG	Skipping os scan for layer 7f2aca4bea48e7eaede4910813b48c8b7b248c0460ec7f28d3d462b045d1ee0c. Already cached.
+2026-03-23T19:05:33.840Z	DEBUG	Skipping os scan for layer 4eb657a200e4951ac84dad8faea714335c97943d9c291c8c5f0c7498ce5b05a0. Already cached.
+2026-03-23T19:05:33.843Z	DEBUG	Skipping os scan for layer 0701d8edfcd1ca6761273edc97cfedfa61ad0accfc1bf0cf7e4e59e7e386e26d. Already cached.
+2026-03-23T19:05:33.846Z	DEBUG	Skipping os scan for layer 4066e38f7afc486edcbe65178c19d2f2744f21d5d207e170ebfce042ec76c30c. Already cached.
+2026-03-23T19:05:33.849Z	DEBUG	Skipping fileinsight scan for layer dfceb56c1c97f55b9fecf820738c1f7d80d2525d7a9ef6966c50984541d39f48. Already cached.
+2026-03-23T19:05:33.852Z	DEBUG	Skipping sca scan for layer 7f2aca4bea48e7eaede4910813b48c8b7b248c0460ec7f28d3d462b045d1ee0c. Already cached.
+2026-03-23T19:05:33.855Z	DEBUG	Skipping sca scan for layer 4eb657a200e4951ac84dad8faea714335c97943d9c291c8c5f0c7498ce5b05a0. Already cached.
+2026-03-23T19:05:33.858Z	DEBUG	Skipping sca scan for layer 0701d8edfcd1ca6761273edc97cfedfa61ad0accfc1bf0cf7e4e59e7e386e26d. Already cached.
+2026-03-23T19:05:33.861Z	DEBUG	Skipping sca scan for layer 4066e38f7afc486edcbe65178c19d2f2744f21d5d207e170ebfce042ec76c30c. Already cached.
+2026-03-23T19:05:33.868Z	DEBUG	Skipping fileinsight scan for layer 7f2aca4bea48e7eaede4910813b48c8b7b248c0460ec7f28d3d462b045d1ee0c. Already cached.
+2026-03-23T19:05:33.871Z	DEBUG	Skipping fileinsight scan for layer 4eb657a200e4951ac84dad8faea714335c97943d9c291c8c5f0c7498ce5b05a0. Already cached.
+2026-03-23T19:05:33.874Z	DEBUG	Skipping fileinsight scan for layer 0701d8edfcd1ca6761273edc97cfedfa61ad0accfc1bf0cf7e4e59e7e386e26d. Already cached.
+2026-03-23T19:05:33.877Z	DEBUG	Skipping fileinsight scan for layer 4066e38f7afc486edcbe65178c19d2f2744f21d5d207e170ebfce042ec76c30c. Already cached.
+2026-03-23T19:05:33.907Z	DEBUG	Skipping os scan for layer 7041098104f722a770ddd8b3a679a060e812a8013f0e80be94fd2b9fa2f6336b. Already cached.
+2026-03-23T19:05:33.921Z	DEBUG	Skipping sca scan for layer 7041098104f722a770ddd8b3a679a060e812a8013f0e80be94fd2b9fa2f6336b. Already cached.
+2026-03-23T19:05:33.924Z	DEBUG	Skipping os scan for layer 9684635e4f4526295b44a7a58fbaa852028bde75f99c393a13d2978d7122afcf. Already cached.
+2026-03-23T19:05:33.927Z	DEBUG	Skipping os scan for layer 533482174cecca42283609ca8ded7f534c9e87f17a2f56f25489e476f57da21d. Already cached.
+2026-03-23T19:05:33.930Z	DEBUG	Skipping os scan for layer 74d5dcadbbbc0deb25e7702fb9be44c7b0a20b899244201942744580a15d4343. Already cached.
+2026-03-23T19:05:33.932Z	DEBUG	Skipping os scan for layer 188a2a7d2c344f58e3e76da65fdbf8fbb5e15fc3dce692c9c37540f61f503ba2. Already cached.
+2026-03-23T19:05:33.934Z	DEBUG	Skipping fileinsight scan for layer 7041098104f722a770ddd8b3a679a060e812a8013f0e80be94fd2b9fa2f6336b. Already cached.
+2026-03-23T19:05:33.937Z	DEBUG	Skipping sca scan for layer 9684635e4f4526295b44a7a58fbaa852028bde75f99c393a13d2978d7122afcf. Already cached.
+2026-03-23T19:05:33.940Z	DEBUG	Skipping sca scan for layer 533482174cecca42283609ca8ded7f534c9e87f17a2f56f25489e476f57da21d. Already cached.
+2026-03-23T19:05:33.943Z	DEBUG	Skipping sca scan for layer 74d5dcadbbbc0deb25e7702fb9be44c7b0a20b899244201942744580a15d4343. Already cached.
+2026-03-23T19:05:33.945Z	DEBUG	Skipping sca scan for layer 188a2a7d2c344f58e3e76da65fdbf8fbb5e15fc3dce692c9c37540f61f503ba2. Already cached.
+2026-03-23T19:05:33.954Z	DEBUG	Skipping fileinsight scan for layer 9684635e4f4526295b44a7a58fbaa852028bde75f99c393a13d2978d7122afcf. Already cached.
+2026-03-23T19:05:33.955Z	DEBUG	Skipping fileinsight scan for layer 533482174cecca42283609ca8ded7f534c9e87f17a2f56f25489e476f57da21d. Already cached.
+2026-03-23T19:05:33.958Z	DEBUG	Skipping fileinsight scan for layer 74d5dcadbbbc0deb25e7702fb9be44c7b0a20b899244201942744580a15d4343. Already cached.
+2026-03-23T19:05:33.961Z	DEBUG	Skipping fileinsight scan for layer 188a2a7d2c344f58e3e76da65fdbf8fbb5e15fc3dce692c9c37540f61f503ba2. Already cached.
+2026-03-23T19:05:33.994Z	DEBUG	Skipping os scan for layer e9f914f0be8f8944a657c5f2fa3ae32ad3f9122c189848eefaf7f05e370fa0a6. Already cached.
+2026-03-23T19:05:34.010Z	DEBUG	Skipping sca scan for layer e9f914f0be8f8944a657c5f2fa3ae32ad3f9122c189848eefaf7f05e370fa0a6. Already cached.
+2026-03-23T19:05:34.013Z	DEBUG	Skipping os scan for layer 2187a88e3cad17046f3ab5d00aee0a0fcb7a2d132017fc9544d39649403707c0. Already cached.
+2026-03-23T19:05:34.017Z	DEBUG	Skipping os scan for layer 4e84dc92cf0013fb3b5de79e4826dbc46199667aee88ce7aa128db8b641ea76d. Already cached.
+2026-03-23T19:05:34.020Z	DEBUG	Skipping os scan for layer 8d4bc10a631841f969a6fda139b6a818301f5e9529a255cd703b9a31e7614892. Already cached.
+2026-03-23T19:05:34.023Z	DEBUG	Skipping os scan for layer 2dba662b3ac9baecc52d86e7669a9fd562d248447598a0ddcb417059720a8e54. Already cached.
+2026-03-23T19:05:34.026Z	DEBUG	Skipping fileinsight scan for layer e9f914f0be8f8944a657c5f2fa3ae32ad3f9122c189848eefaf7f05e370fa0a6. Already cached.
+2026-03-23T19:05:34.029Z	DEBUG	Skipping sca scan for layer 2187a88e3cad17046f3ab5d00aee0a0fcb7a2d132017fc9544d39649403707c0. Already cached.
+2026-03-23T19:05:34.033Z	DEBUG	Skipping sca scan for layer 4e84dc92cf0013fb3b5de79e4826dbc46199667aee88ce7aa128db8b641ea76d. Already cached.
+2026-03-23T19:05:34.035Z	DEBUG	Skipping sca scan for layer 8d4bc10a631841f969a6fda139b6a818301f5e9529a255cd703b9a31e7614892. Already cached.
+2026-03-23T19:05:34.039Z	DEBUG	Skipping sca scan for layer 2dba662b3ac9baecc52d86e7669a9fd562d248447598a0ddcb417059720a8e54. Already cached.
+2026-03-23T19:05:34.044Z	DEBUG	Skipping fileinsight scan for layer 2187a88e3cad17046f3ab5d00aee0a0fcb7a2d132017fc9544d39649403707c0. Already cached.
+2026-03-23T19:05:34.047Z	DEBUG	Skipping fileinsight scan for layer 4e84dc92cf0013fb3b5de79e4826dbc46199667aee88ce7aa128db8b641ea76d. Already cached.
+2026-03-23T19:05:34.050Z	DEBUG	Skipping fileinsight scan for layer 8d4bc10a631841f969a6fda139b6a818301f5e9529a255cd703b9a31e7614892. Already cached.
+2026-03-23T19:05:34.053Z	DEBUG	Skipping fileinsight scan for layer 2dba662b3ac9baecc52d86e7669a9fd562d248447598a0ddcb417059720a8e54. Already cached.
+2026-03-23T19:05:34.095Z	INFO	[os sca fileinsight] scan completed in 447.61311ms
+2026-03-23T19:05:34.096Z	INFO	OS detected: Oracle Enterprise Linux 8.10
+2026-03-23T19:05:34.096Z	INFO	OS package(s) detected: 148
+2026-03-23T19:05:34.099Z	INFO	Technologies detected (1): [Go]
+2026-03-23T19:05:34.100Z	INFO	Language package(s) detected: 783
+2026-03-23T19:05:34.100Z	INFO	FileInsight findings: 6
+2026-03-23T19:05:34.100Z	INFO	All scans completed in 453.27935ms
+2026-03-23T19:05:34.100Z	DEBUG	Cache cleanup frequency is 168h0m0s. Last cleanup was performed 17h34m44.311541491s ago.
+2026-03-23T19:05:34.100Z	DEBUG	Cache cleanup not required
+2026-03-23T19:05:34.100Z	DEBUG	Closing cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:05:34.100Z	DEBUG	PostScan
+2026-03-23T19:05:34.101Z	DEBUG	Registered JSON Result Output Handler
+2026-03-23T19:05:34.101Z	DEBUG	Registered SPDX Handler
+2026-03-23T19:05:34.101Z	DEBUG	Registered Changelist Output Handler
+2026-03-23T19:05:34.110Z	INFO	Scan Result JSON created at /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ScanResult.json
+2026-03-23T19:05:34.136Z	INFO	SPDX document created at /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ScanResult.spdx.json
+2026-03-23T19:05:34.227Z	DEBUG	Compressed SBOM created at /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ScanResult.spdx.json.xz
+2026-03-23T19:05:34.227Z	INFO	Uploading SBOM /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ScanResult.spdx.json.xz
+2026-03-23T19:05:34.228Z	INFO	Access token expiring on 2027-02-08 05:55:34 +0000 UTC
+2026-03-23T19:05:34.228Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:05:34.228Z	DEBUG	Uploading fragment #1 of 65106 bytes
+2026-03-23T19:05:34.228Z	DEBUG	Finalizing upload
+2026-03-23T19:05:34.228Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:05:34.228Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:05:34.228Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/sbom/customer/0631dbea-f39c-6263-820b-2ddf4cd9c95b/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/fragment/1/finalize
+2026-03-23T19:05:34.730Z	DEBUG	Response status: 200 OK
+2026-03-23T19:05:34.746Z	DEBUG	Bytes uploaded: 65106
+2026-03-23T19:05:34.746Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:05:34.746Z	DEBUG	Total bytes uploaded: 65106
+2026-03-23T19:05:34.746Z	INFO	SBOM uploaded successfully
+2026-03-23T19:05:34.746Z	INFO	Creating changelist
+2026-03-23T19:05:34.746Z	DEBUG	Creating Metadata table
+2026-03-23T19:05:34.770Z	DEBUG	Metadata table created in 23.912468ms
+2026-03-23T19:05:34.770Z	DEBUG	Creating AgentInfo table
+2026-03-23T19:05:34.794Z	DEBUG	AgentInfo table created in 23.895748ms
+2026-03-23T19:05:34.794Z	DEBUG	Creating UnixCommand table
+2026-03-23T19:05:34.820Z	DEBUG	UnixCommand table created in 25.925034ms
+2026-03-23T19:05:34.820Z	DEBUG	Creating InstalledSoftware table
+2026-03-23T19:05:34.851Z	DEBUG	InstalledSoftware table created in 31.304972ms
+2026-03-23T19:05:34.851Z	DEBUG	Creating SCASoftwareInfo table
+2026-03-23T19:05:34.912Z	DEBUG	SCASoftwareInfo table created in 60.876206ms
+2026-03-23T19:05:34.912Z	DEBUG	Creating SCATechnologiesDetected table
+2026-03-23T19:05:34.940Z	DEBUG	SCATechnologiesDetected table created in 27.44248ms
+2026-03-23T19:05:34.940Z	DEBUG	Creating SCAInstalledSoftwareMap table
+2026-03-23T19:05:34.976Z	DEBUG	SCAInstalledSoftwareMap table created in 36.367778ms
+2026-03-23T19:05:34.976Z	DEBUG	Creating LayerInfo table
+2026-03-23T19:05:35.001Z	DEBUG	LayerInfo table created in 24.930102ms
+2026-03-23T19:05:35.001Z	DEBUG	Changelist DB created at /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ChangeList.db
+2026-03-23T19:05:35.054Z	INFO	Compressed Changelist DB created at /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ChangeList.db.xz
+2026-03-23T19:05:35.054Z	DEBUG	Original changelist removed
+2026-03-23T19:05:35.054Z	INFO	Uploading changelist /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-ChangeList.db.xz
+2026-03-23T19:05:35.055Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:05:35.055Z	DEBUG	Uploading fragment #1 of 64000 bytes
+2026-03-23T19:05:35.055Z	DEBUG	Finalizing upload
+2026-03-23T19:05:35.055Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:05:35.055Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:05:35.055Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/asset/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/snapshot/b8c76b10-86db-4cea-bfd7-73bf7884bc9f/fragment/1/finalize
+2026-03-23T19:05:35.540Z	DEBUG	Response status: 200 OK
+2026-03-23T19:05:35.553Z	DEBUG	Bytes uploaded: 64000
+2026-03-23T19:05:35.553Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:05:35.553Z	DEBUG	Total bytes uploaded: 64000
+2026-03-23T19:05:35.553Z	DEBUG	Publish on Kafka
+2026-03-23T19:05:35.553Z	DEBUG	SSM Task details:
+{
+    "SSMTaskDetails": {
+        "AssetUUID": "6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192",
+        "SnapshotUUID": "b8c76b10-86db-4cea-bfd7-73bf7884bc9f",
+        "SnapshotPath": "cms/cli/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/b8c76b10-86db-4cea-bfd7-73bf7884bc9f",
+        "SnapshotBucket": "cs-ssm-delta-snapshot",
+        "RequestId": "15302115-7814-49da-9bf6-36e521331047",
+        "Platform": "LINUX_SENSOR",
+        "ManifestType": "Vulnerability",
+        "CompressionTechnique": "LZMA",
+        "Source": "qscanner"
+    }
+}
+2026-03-23T19:05:35.554Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:05:35.554Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:05:35.554Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/ssm/task/publish
+2026-03-23T19:05:35.798Z	DEBUG	Response status: 200 OK
+2026-03-23T19:05:35.798Z	INFO	Changelist uploaded successfully
+2026-03-23T19:05:35.798Z	DEBUG	Registered Inventory reporter
+2026-03-23T19:05:35.798Z	DEBUG	Registered Vulnerability reporter
+2026-03-23T19:05:35.798Z	INFO	Skip fetching of policy evaluation result
+2026-03-23T19:05:35.798Z	INFO	Fetching vulnerability report
+2026-03-23T19:05:50.812Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:05:50.812Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:05:50.812Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/vuln?imageFilter=lastScanned%3A%5Bnow-18s+..+now%5D
+2026-03-23T19:05:51.207Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:05:51.207Z	DEBUG	Vuln report not yet available
+2026-03-23T19:05:51.207Z	INFO	Status: [404 Not Found]. Retrying in 5s. (attempt 1/10)
+2026-03-23T19:05:56.212Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/vuln?imageFilter=lastScanned%3A%5Bnow-24s+..+now%5D
+2026-03-23T19:05:56.419Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:05:56.419Z	DEBUG	Vuln report not yet available
+2026-03-23T19:05:56.419Z	INFO	Status: [404 Not Found]. Retrying in 10s. (attempt 2/10)
+2026-03-23T19:06:06.428Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/vuln?imageFilter=lastScanned%3A%5Bnow-34s+..+now%5D
+2026-03-23T19:06:06.646Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:06:06.646Z	DEBUG	Vuln report not yet available
+2026-03-23T19:06:06.646Z	INFO	Status: [404 Not Found]. Retrying in 20s. (attempt 3/10)
+2026-03-23T19:06:26.665Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192/vuln?imageFilter=lastScanned%3A%5Bnow-54s+..+now%5D
+2026-03-23T19:06:26.896Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:26.896Z	INFO	Vulnerability report received
+2026-03-23T19:06:26.896Z	INFO	4 vulnerabilities found!
+2026-03-23T19:06:26.896Z	INFO	  Severity 5: 0
+2026-03-23T19:06:26.896Z	INFO	  Severity 4: 2
+2026-03-23T19:06:26.897Z	INFO	  Severity 3: 1
+2026-03-23T19:06:26.897Z	INFO	  Severity 2: 1
+2026-03-23T19:06:26.897Z	INFO	  Severity 1: 0
+
+Vulnerabilities:
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+|        SOFTWARE NAME         |   QID   | QDS | VULN AGE |     CVE(S)     |  INSTALLED VERSION   | FIXED VERSION |                SUMMARY                |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+| github.com/cloudflare/circl  | 5007991 | 20  | 25 days  | CVE-2026-1229  | v1.6.1               | 1.6.3         | Go (Go) Security Update for           |
+|                              |         |     |          |                |                      |               | github.com/cloudflare/circl           |
+|                              |         |     |          |                |                      |               | (GHSA-q9hv-hpm4-hj6x)                 |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+| github.com/docker/cli        | 5008764 | 35  | 14 days  | CVE-2025-15558 | v28.4.0+incompatible | 29.2.0        | Go (Go) Security Update               |
+|                              |         |     |          |                |                      |               | for github.com/docker/cli             |
+|                              |         |     |          |                |                      |               | (GHSA-p436-gjf2-799p)                 |
++                              +         +     +          +                +----------------------+               +                                       +
+|                              |         |     |          |                | v29.0.3+incompatible |               |                                       |
+|                              |         |     |          |                |                      |               |                                       |
+|                              |         |     |          |                |                      |               |                                       |
++------------------------------+---------+     +----------+----------------+----------------------+---------------+---------------------------------------+
+| go.opentelemetry.io/otel/sdk | 5007318 |     | 48 days  | CVE-2026-24051 | v1.38.0              | 1.40.0        | Go (Go) Security Update for           |
+|                              |         |     |          |                |                      |               | go.opentelemetry.io/otel/sdk/resource |
+|                              |         |     |          |                |                      |               | (GHSA-9h8m-3fm2-qjrq)                 |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+| k8s.io/kubernetes            | 5006626 | 30  | 96 days  | CVE-2025-13281 | v1.34.1              | 1.34.2        | Go (Go) Security Update               |
+|                              |         |     |          |                |                      |               | for k8s.io/kubernetes                 |
+|                              |         |     |          |                |                      |               | (GHSA-r6j8-c6r2-37rr)                 |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+2026-03-23T19:06:26.901Z	INFO	For more details refer /root/qualys/qscanner/data/6db5fe472f64f95e1b3db891e5438319331801ea8b8e56800f54cc7f9bc44192-Report.sarif.json
+2026-03-23T19:06:26.901Z	INFO	Skipping policy evaluation
+2026-03-23T19:06:26.901Z	DEBUG	Cleaning up scan target
+</pre></details>
             </div>
         </div>
         
@@ -1243,8 +1590,8 @@
             <td>72</td>
             <td>45 days</td>
             <td><code>CVE-2025-68121</code></td>
-            <td><code>v1.24.6</code></td>
-            <td><code>1.24.13</code></td>
+            <td><code>v1.25.1</code></td>
+            <td><code>1.25.7</code></td>
             <td style="max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="Go (Go) Security Update for stdlib (GO-2026-4337)">Go (Go) Security Update for stdlib (GO-2026-4337)</td>
         </tr></tbody>
     </table><div style="margin-top:24px;border-top:3px solid #1a237e;padding-top:16px;"><h4 style="margin-bottom:14px;font-size:17px;"><font color="#1a237e"><b>&#128202; CVSS-Based SLA Compliance</b></font></h4>
@@ -1579,7 +1926,441 @@
             <td align="center"><b>180 days</b></td>
             <td><font color="#388e3c">168 days remaining</font></td>
         </tr></tbody>
-    </table></div>
+    </table></div><details style="margin-top:8px;"><summary style="cursor:pointer;font-weight:600;">QScanner Full Log (435 lines)</summary><pre style="max-height:500px;overflow:auto;background:#f9f9f9;padding:12px;border-radius:6px;font-size:11px;">Using logfile /root/qualys/qscanner/data/qscanner.log
+   ____    _____
+  / __ \  / ___/  _____  ____ _   ____    ____   ___    _____
+ / / / /  \__ \  / ___/ / __ `/  / __ \  / __ \ / _ \  / ___/
+/ /_/ /  ___/ / / /__  / /_/ /  / / / / / / / //  __/ / /
+\___\_\ /____/  \___/  \__,_/  /_/ /_/ /_/ /_/ \___/ /_/
+
+By Qualys | version: 4.8.0-3
+
+2026-03-23T19:06:31.007Z	INFO	New instance of qscanner-4.8.0-3 started with invocation ID b612480a-987c-41ae-93ed-8540f651411c
+2026-03-23T19:06:31.008Z	DEBUG	Created process-specific temp directory: /tmp/qscanner-44247
+2026-03-23T19:06:31.008Z	DEBUG	Global Options: {
+    "LogLevel": "debug",
+    "SilentMode": false,
+    "FileLogging": true,
+    "BackendLogging": false,
+    "OutputDir": "/root/qualys/qscanner/data",
+    "TargetKind": "image",
+    "GatewayURL": "https://gateway.qg1.apps.qualys.com",
+    "AccessToken": "********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************",
+    "ClientID": "",
+    "ClientSecret": "",
+    "CacheAuthToken": false,
+    "CertPath": "",
+    "SkipTLSVerification": true,
+    "UseProxy": "",
+    "FragmentSizeInKB": 390,
+    "CacheDir": "/root/.cache/qualys/qscanner",
+    "RunProfiler": false,
+    "ShowPerfStat": false,
+    "PerfStatInterval": 1000000000,
+    "MaxNetworkRetries": 10,
+    "NetworkRetryWaitMin": 5000000000,
+    "NetworkRetryWaitMax": 120000000000,
+    "PerformVersionCheck": true
+}
+2026-03-23T19:06:31.008Z	DEBUG	Version check metadata loaded from /root/.cache/qualys/qscanner/version_check_metadata.json
+2026-03-23T19:06:31.008Z	INFO	Fetching image details
+2026-03-23T19:06:31.013Z	INFO	Image source: docker
+2026-03-23T19:06:31.013Z	INFO	Image present locally. Consider using '--storage-driver docker-overlay2' for faster scan
+2026-03-23T19:06:31.013Z	DEBUG	Image ID: 2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2
+2026-03-23T19:06:31.013Z	DEBUG	Layer SHAs:
+2026-03-23T19:06:31.013Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:06:31.013Z	DEBUG	 2) b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2
+2026-03-23T19:06:31.013Z	DEBUG	 3) 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84
+2026-03-23T19:06:31.013Z	DEBUG	 4) 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89
+2026-03-23T19:06:31.013Z	DEBUG	 5) d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb
+2026-03-23T19:06:31.013Z	DEBUG	 6) db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4
+2026-03-23T19:06:31.013Z	DEBUG	 7) 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24
+2026-03-23T19:06:31.013Z	DEBUG	 8) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:06:31.013Z	DEBUG	 9) 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956
+2026-03-23T19:06:31.013Z	DEBUG	10) 7bea50fc2e8127580c8c4389e105c10499ec1b8e61e05398b9ace781c65cddec
+2026-03-23T19:06:31.013Z	DEBUG	11) df6a567eb021364b5ec4fa9c59e2f7c14b5e9844b222c9328ee82a7705df806e
+2026-03-23T19:06:31.013Z	DEBUG	12) 6a8546ef4056d97d738977c39c2805925a3de1806588e15855a5ac11c39d9857
+2026-03-23T19:06:31.013Z	DEBUG	13) 1474065ca904f13b0bf69185f980388bec880c1c82cddcf3557cea00eff98f85
+2026-03-23T19:06:31.013Z	DEBUG	14) a8c09c2dbd8f1b721bc5a5958a62ea778f3b7f4bf641159e2bf00af77ab27c1f
+2026-03-23T19:06:31.013Z	DEBUG	15) ad28b58d02633732bcc28b814ee842d60ace7c31fcc977b84939c81c1fdc6410
+2026-03-23T19:06:31.013Z	DEBUG	Waiting to access local cache DB
+2026-03-23T19:06:31.015Z	DEBUG	Using local cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:06:31.015Z	DEBUG	Target [image] created for [qualys/runtime-sensor:latest], with following options:
+2026-03-23T19:06:31.015Z	DEBUG	Scan Options: {
+    "ScanTypes": [
+        "os",
+        "sca",
+        "fileinsight"
+    ],
+    "OutputFormats": [
+        "db",
+        "json",
+        "spdx"
+    ],
+    "ReportFormats": [
+        "table",
+        "sarif"
+    ],
+    "ExcludeDirs": [],
+    "ExcludeFiles": [],
+    "IncludeDirs": {},
+    "ScanTargetInfo": {},
+    "ShellCommands": {},
+    "ExitIfOSNotFound": false,
+    "ExitIfOSPkgNotFound": false,
+    "SecretConfigFile": "",
+    "SecretConfigRefreshDuration": 86400000000000,
+    "ForceSecretConfigRefresh": false,
+    "OfflineScan": false,
+    "SkipJavaDbUpdate": false,
+    "JavaDbUpdateIntervalInDays": 15,
+    "ScanTimeout": 300000000000,
+    "Mode": 30,
+    "PolicyTags": [],
+    "CacheType": "local",
+    "CacheCleanupDurationThreshold": 3888000000000000,
+    "CacheCleanupFrequency": 604800000000000,
+    "EnableCacheCleanup": true,
+    "DisabledSCALanguages": [],
+    "InputCacheFile": "",
+    "LimitResourceUsage": false,
+    "MultiVolume": false,
+    "MultiPartition": false,
+    "StorageDriver": "none",
+    "RegistryUsername": "",
+    "RegistryPassword": "",
+    "RegistryToken": "",
+    "AllowPartialScan": false,
+    "Platform": "",
+    "ManifestPath": "",
+    "DetectionPriority": "precise",
+    "QDSThreshold": -1,
+    "FileInsightConfigFile": "",
+    "WinRegistryConfigFile": "",
+    "MaskEnvVariables": false,
+    "ScanWritableLayerOnly": false,
+    "CollectBuildPipelineMetadata": false
+}
+2026-03-23T19:06:31.015Z	DEBUG	Registered Metadata Scanner
+2026-03-23T19:06:31.016Z	DEBUG	Registered OS Scanner
+2026-03-23T19:06:31.016Z	DEBUG	Registered SCA Scanner
+2026-03-23T19:06:31.016Z	DEBUG	Registered FileInsight Scanner
+2026-03-23T19:06:31.016Z	DEBUG	PreScan
+2026-03-23T19:06:31.016Z	DEBUG	Using built-in fileinsight-config
+2026-03-23T19:06:31.016Z	INFO	Starting Metadata scan
+2026-03-23T19:06:31.016Z	INFO	Metadata scan completed in 222.036µs
+2026-03-23T19:06:31.016Z	INFO	Starting [os sca fileinsight] scan
+2026-03-23T19:06:31.016Z	DEBUG	Base Layers:
+2026-03-23T19:06:31.016Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:06:31.019Z	DEBUG	Skipping os scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:06:31.022Z	DEBUG	Skipping os scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:06:31.024Z	DEBUG	Skipping os scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:06:31.027Z	DEBUG	Skipping os scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:31.029Z	DEBUG	Skipping sca scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:31.031Z	DEBUG	Skipping os scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:06:31.034Z	DEBUG	Skipping sca scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:06:31.036Z	DEBUG	Skipping sca scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:06:31.038Z	DEBUG	Skipping sca scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:06:31.040Z	DEBUG	Skipping fileinsight scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:31.042Z	DEBUG	Skipping sca scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:06:31.044Z	DEBUG	Skipping fileinsight scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:06:31.046Z	DEBUG	Skipping fileinsight scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:06:31.048Z	DEBUG	Skipping fileinsight scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:06:31.053Z	DEBUG	Skipping fileinsight scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:06:31.087Z	DEBUG	Skipping os scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:06:31.091Z	DEBUG	Skipping os scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:06:31.094Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:31.096Z	DEBUG	Skipping os scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:06:31.098Z	DEBUG	Skipping sca scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:06:31.100Z	DEBUG	Skipping os scan for layer 7bea50fc2e8127580c8c4389e105c10499ec1b8e61e05398b9ace781c65cddec. Already cached.
+2026-03-23T19:06:31.102Z	DEBUG	Skipping sca scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:06:31.104Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:31.106Z	DEBUG	Skipping sca scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:06:31.108Z	DEBUG	Skipping fileinsight scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:06:31.110Z	DEBUG	Skipping sca scan for layer 7bea50fc2e8127580c8c4389e105c10499ec1b8e61e05398b9ace781c65cddec. Already cached.
+2026-03-23T19:06:31.112Z	DEBUG	Skipping fileinsight scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:06:31.114Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:31.116Z	DEBUG	Skipping fileinsight scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:06:31.121Z	DEBUG	Skipping fileinsight scan for layer 7bea50fc2e8127580c8c4389e105c10499ec1b8e61e05398b9ace781c65cddec. Already cached.
+2026-03-23T19:06:31.152Z	DEBUG	Skipping os scan for layer df6a567eb021364b5ec4fa9c59e2f7c14b5e9844b222c9328ee82a7705df806e. Already cached.
+2026-03-23T19:06:31.156Z	DEBUG	Skipping os scan for layer 6a8546ef4056d97d738977c39c2805925a3de1806588e15855a5ac11c39d9857. Already cached.
+2026-03-23T19:06:31.159Z	DEBUG	Skipping os scan for layer 1474065ca904f13b0bf69185f980388bec880c1c82cddcf3557cea00eff98f85. Already cached.
+2026-03-23T19:06:31.161Z	DEBUG	Skipping os scan for layer a8c09c2dbd8f1b721bc5a5958a62ea778f3b7f4bf641159e2bf00af77ab27c1f. Already cached.
+2026-03-23T19:06:31.164Z	DEBUG	Skipping sca scan for layer df6a567eb021364b5ec4fa9c59e2f7c14b5e9844b222c9328ee82a7705df806e. Already cached.
+2026-03-23T19:06:31.166Z	DEBUG	Skipping os scan for layer ad28b58d02633732bcc28b814ee842d60ace7c31fcc977b84939c81c1fdc6410. Already cached.
+2026-03-23T19:06:31.168Z	DEBUG	Skipping sca scan for layer 6a8546ef4056d97d738977c39c2805925a3de1806588e15855a5ac11c39d9857. Already cached.
+2026-03-23T19:06:31.170Z	DEBUG	Skipping sca scan for layer 1474065ca904f13b0bf69185f980388bec880c1c82cddcf3557cea00eff98f85. Already cached.
+2026-03-23T19:06:31.173Z	DEBUG	Skipping sca scan for layer a8c09c2dbd8f1b721bc5a5958a62ea778f3b7f4bf641159e2bf00af77ab27c1f. Already cached.
+2026-03-23T19:06:31.175Z	DEBUG	Skipping fileinsight scan for layer df6a567eb021364b5ec4fa9c59e2f7c14b5e9844b222c9328ee82a7705df806e. Already cached.
+2026-03-23T19:06:31.177Z	DEBUG	Skipping sca scan for layer ad28b58d02633732bcc28b814ee842d60ace7c31fcc977b84939c81c1fdc6410. Already cached.
+2026-03-23T19:06:31.179Z	DEBUG	Skipping fileinsight scan for layer 6a8546ef4056d97d738977c39c2805925a3de1806588e15855a5ac11c39d9857. Already cached.
+2026-03-23T19:06:31.181Z	DEBUG	Skipping fileinsight scan for layer 1474065ca904f13b0bf69185f980388bec880c1c82cddcf3557cea00eff98f85. Already cached.
+2026-03-23T19:06:31.183Z	DEBUG	Skipping fileinsight scan for layer a8c09c2dbd8f1b721bc5a5958a62ea778f3b7f4bf641159e2bf00af77ab27c1f. Already cached.
+2026-03-23T19:06:31.187Z	DEBUG	Skipping fileinsight scan for layer ad28b58d02633732bcc28b814ee842d60ace7c31fcc977b84939c81c1fdc6410. Already cached.
+2026-03-23T19:06:31.218Z	INFO	[os sca fileinsight] scan completed in 201.890925ms
+2026-03-23T19:06:31.219Z	INFO	OS detected: Oracle Enterprise Linux 8.10
+2026-03-23T19:06:31.219Z	INFO	OS package(s) detected: 103
+2026-03-23T19:06:31.219Z	INFO	Technologies detected (1): [Go]
+2026-03-23T19:06:31.219Z	INFO	Language package(s) detected: 187
+2026-03-23T19:06:31.219Z	INFO	FileInsight findings: 6
+2026-03-23T19:06:31.219Z	INFO	All scans completed in 203.78411ms
+2026-03-23T19:06:31.219Z	DEBUG	Cache cleanup frequency is 168h0m0s. Last cleanup was performed 17h35m41.431067022s ago.
+2026-03-23T19:06:31.219Z	DEBUG	Cache cleanup not required
+2026-03-23T19:06:31.219Z	DEBUG	Closing cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:06:31.220Z	DEBUG	PostScan
+2026-03-23T19:06:31.220Z	DEBUG	Registered JSON Result Output Handler
+2026-03-23T19:06:31.220Z	DEBUG	Registered SPDX Handler
+2026-03-23T19:06:31.220Z	DEBUG	Registered Changelist Output Handler
+2026-03-23T19:06:31.224Z	INFO	Scan Result JSON created at /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ScanResult.json
+2026-03-23T19:06:31.236Z	INFO	SPDX document created at /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ScanResult.spdx.json
+2026-03-23T19:06:31.281Z	DEBUG	Compressed SBOM created at /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ScanResult.spdx.json.xz
+2026-03-23T19:06:31.281Z	INFO	Uploading SBOM /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ScanResult.spdx.json.xz
+2026-03-23T19:06:31.281Z	INFO	Access token expiring on 2027-02-08 05:55:34 +0000 UTC
+2026-03-23T19:06:31.281Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:06:31.282Z	DEBUG	Uploading fragment #1 of 24829 bytes
+2026-03-23T19:06:31.282Z	DEBUG	Finalizing upload
+2026-03-23T19:06:31.282Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:31.282Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:31.282Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/sbom/customer/0631dbea-f39c-6263-820b-2ddf4cd9c95b/image/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2/fragment/1/finalize
+2026-03-23T19:06:31.718Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:31.732Z	DEBUG	Bytes uploaded: 24829
+2026-03-23T19:06:31.732Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:06:31.732Z	DEBUG	Total bytes uploaded: 24829
+2026-03-23T19:06:31.732Z	INFO	SBOM uploaded successfully
+2026-03-23T19:06:31.733Z	INFO	Creating changelist
+2026-03-23T19:06:31.733Z	DEBUG	Creating Metadata table
+2026-03-23T19:06:31.755Z	DEBUG	Metadata table created in 22.844414ms
+2026-03-23T19:06:31.756Z	DEBUG	Creating AgentInfo table
+2026-03-23T19:06:31.775Z	DEBUG	AgentInfo table created in 19.72674ms
+2026-03-23T19:06:31.775Z	DEBUG	Creating UnixCommand table
+2026-03-23T19:06:31.796Z	DEBUG	UnixCommand table created in 20.630156ms
+2026-03-23T19:06:31.796Z	DEBUG	Creating InstalledSoftware table
+2026-03-23T19:06:31.818Z	DEBUG	InstalledSoftware table created in 21.810749ms
+2026-03-23T19:06:31.818Z	DEBUG	Creating SCASoftwareInfo table
+2026-03-23T19:06:31.844Z	DEBUG	SCASoftwareInfo table created in 25.861498ms
+2026-03-23T19:06:31.844Z	DEBUG	Creating SCATechnologiesDetected table
+2026-03-23T19:06:31.863Z	DEBUG	SCATechnologiesDetected table created in 19.5479ms
+2026-03-23T19:06:31.863Z	DEBUG	Creating SCAInstalledSoftwareMap table
+2026-03-23T19:06:31.886Z	DEBUG	SCAInstalledSoftwareMap table created in 22.690904ms
+2026-03-23T19:06:31.886Z	DEBUG	Creating LayerInfo table
+2026-03-23T19:06:31.908Z	DEBUG	LayerInfo table created in 21.499699ms
+2026-03-23T19:06:31.908Z	DEBUG	Changelist DB created at /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ChangeList.db
+2026-03-23T19:06:31.941Z	INFO	Compressed Changelist DB created at /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ChangeList.db.xz
+2026-03-23T19:06:31.941Z	DEBUG	Original changelist removed
+2026-03-23T19:06:31.941Z	INFO	Uploading changelist /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-ChangeList.db.xz
+2026-03-23T19:06:31.941Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:06:31.941Z	DEBUG	Uploading fragment #1 of 26233 bytes
+2026-03-23T19:06:31.941Z	DEBUG	Finalizing upload
+2026-03-23T19:06:31.941Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:31.941Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:31.941Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/asset/image/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2/snapshot/26c229b6-1ff4-4eac-99fd-4724cc5cf89f/fragment/1/finalize
+2026-03-23T19:06:32.383Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:32.396Z	DEBUG	Bytes uploaded: 26233
+2026-03-23T19:06:32.396Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:06:32.396Z	DEBUG	Total bytes uploaded: 26233
+2026-03-23T19:06:32.396Z	DEBUG	Publish on Kafka
+2026-03-23T19:06:32.397Z	DEBUG	SSM Task details:
+{
+    "SSMTaskDetails": {
+        "AssetUUID": "2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2",
+        "SnapshotUUID": "26c229b6-1ff4-4eac-99fd-4724cc5cf89f",
+        "SnapshotPath": "cms/cli/image/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2/26c229b6-1ff4-4eac-99fd-4724cc5cf89f",
+        "SnapshotBucket": "cs-ssm-delta-snapshot",
+        "RequestId": "9be9442f-7f3b-46ca-9a33-8ad8f64ad817",
+        "Platform": "LINUX_SENSOR",
+        "ManifestType": "Vulnerability",
+        "CompressionTechnique": "LZMA",
+        "Source": "qscanner"
+    }
+}
+2026-03-23T19:06:32.397Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:32.397Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:32.397Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/ssm/task/publish
+2026-03-23T19:06:32.639Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:32.639Z	INFO	Changelist uploaded successfully
+2026-03-23T19:06:32.639Z	DEBUG	Registered Inventory reporter
+2026-03-23T19:06:32.639Z	DEBUG	Registered Vulnerability reporter
+2026-03-23T19:06:32.639Z	INFO	Skip fetching of policy evaluation result
+2026-03-23T19:06:32.639Z	INFO	Fetching vulnerability report
+2026-03-23T19:06:47.639Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:47.640Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:47.640Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2/vuln?imageFilter=lastScanned%3A%5Bnow-17s+..+now%5D
+2026-03-23T19:06:48.158Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:48.264Z	INFO	Vulnerability report received
+2026-03-23T19:06:48.264Z	INFO	27 vulnerabilities found!
+2026-03-23T19:06:48.264Z	INFO	  Severity 5: 0
+2026-03-23T19:06:48.264Z	INFO	  Severity 4: 23
+2026-03-23T19:06:48.264Z	INFO	  Severity 3: 4
+2026-03-23T19:06:48.264Z	INFO	  Severity 2: 0
+2026-03-23T19:06:48.264Z	INFO	  Severity 1: 0
+
+Vulnerabilities:
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+|      SOFTWARE NAME      |   QID   | QDS | VULN AGE |     CVE(S)     |  INSTALLED VERSION   |    FIXED VERSION     |            SUMMARY             |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| brotli                  | 163986  | 42  | 39 days  | CVE-2025-6176  | 1.0.6-3.el8          | 1.0.6-4.el8_10       | Oracle Enterprise Linux        |
+|                         |         |     |          |                |                      |                      | Security Update for brotli     |
+|                         |         |     |          |                |                      |                      | (ELSA-2026-2389)               |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| github.com/ulikunitz/xz | 5005228 | 30  | 202 days | CVE-2025-58058 | v0.5.12              | 0.5.15               | Go (Go) Security Update        |
+|                         |         |     |          |                |                      |                      | for github.com/ulikunitz/xz    |
+|                         |         |     |          |                |                      |                      | (GHSA-jc7w-c686-c4v9)          |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| glib2                   | 163878  | 42  | 55 days  | CVE-2025-13601 | 2.56.4-167.el8_10    | 2.56.4-168.el8_10    | Oracle Enterprise Linux        |
+|                         |         |     |          |                |                      |                      | Security Update for glib2      |
+|                         |         |     |          |                |                      |                      | (ELSA-2026-0991)               |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| gnupg2                  | 163846  | 35  | 63 days  | CVE-2025-68973 | 2.2.20-3.el8_6       | 2.2.20-4.el8_10      | Oracle Enterprise Linux        |
+|                         |         |     |          |                |                      |                      | Security Update for gnupg2     |
+|                         |         |     |          |                |                      |                      | (ELSA-2026-0728)               |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| golang.org/x/net        | 5003070 | 37  | 375 days | CVE-2025-22870 | v0.33.0              | 0.36.0               | Go (Go) Security Update        |
+|                         |         |     |          |                |                      |                      | for golang.org/x/net           |
+|                         |         |     |          |                |                      |                      | (GHSA-qxp5-gwg8-xv66)          |
++                         +---------+-----+----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5003721 | 30  | 340 days | CVE-2025-22872 |                      | 0.38.0               | Go (Go) Security Update        |
+|                         |         |     |          |                |                      |                      | for golang.org/x/net           |
+|                         |         |     |          |                |                      |                      | (GHSA-vvgc-356p-c3xw)          |
++-------------------------+---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+| libblkid                | 163952  |     | 42 days  | CVE-2025-14104 | 2.32.1-47.0.1.el8_10 | 2.32.1-48.0.1.el8_10 | Oracle Enterprise Linux        |
+|                         |         |     |          |                |                      |                      | Security Update for util-linux |
+|                         |         |     |          |                |                      |                      | (ELSA-2026-1852)               |
++-------------------------+         +     +          +                +                      +                      +                                +
+| libmount                |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
++-------------------------+         +     +          +                +                      +                      +                                +
+| libsmartcols            |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
++-------------------------+         +     +          +                +                      +                      +                                +
+| libuuid                 |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| openssl-libs            | 164051  | 35  | 26 days  | CVE-2025-69419 | 1.1.1k-14.el8_10     | 1.1.1k-15.el8_6      | Oracle Enterprise Linux        |
+|                         |         |     |          |                |                      |                      | Security Update for Open       |
+|                         |         |     |          |                |                      |                      | Secure Sockets Layer (OpenSSL) |
+|                         |         |     |          |                |                      |                      | (ELSA-2026-3042)               |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+| stdlib                  | 5007494 | 72  | 45 days  | CVE-2025-68121 | v1.25.1              | 1.25.7               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4337)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.13              |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+-----+----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5007268 | 37  | 53 days  | CVE-2025-61728 |                      | 1.24.12              | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4342)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.25.1              | 1.25.6               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5008844 | 35  | 12 days  | CVE-2026-25679 | v1.24.6              | 1.25.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4601)          |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006018 |     | 144 days | CVE-2025-61723 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4009)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006022 |     |          | CVE-2025-58188 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4013)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5008844 |     | 12 days  | CVE-2026-25679 | v1.25.1              | 1.25.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4601)          |
++                         +---------+     +----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5006430 |     | 108 days | CVE-2025-61729 |                      | 1.25.5               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4155)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.11              |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5006026 |     | 144 days | CVE-2025-58187 |                      | 1.24.9               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4007)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.25.1              | 1.25.3               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5007266 |     | 53 days  | CVE-2025-61726 | v1.24.6              | 1.24.12              | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4341)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.25.1              | 1.25.6               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006019 |     | 144 days | CVE-2025-61725 | v1.24.6              | 1.24.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4006)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.25.1              | 1.25.2               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+-----+          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006021 | 30  |          | CVE-2025-58186 | v1.24.6              | 1.24.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4012)          |
++                         +---------+     +----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5008848 |     | 12 days  | CVE-2026-27142 |                      | 1.25.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4603)          |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5007264 |     | 53 days  | CVE-2025-61730 | v1.25.1              | 1.25.6               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4340)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.12              |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006023 |     | 144 days | CVE-2025-58183 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4014)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5008848 |     | 12 days  | CVE-2026-27142 | v1.25.1              | 1.25.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4603)          |
++                         +---------+     +----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5006017 |     | 144 days | CVE-2025-58185 |                      | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4011)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006024 |     |          | CVE-2025-58189 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4008)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006025 |     |          | CVE-2025-61724 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4015)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006020 |     |          | CVE-2025-47912 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4010)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.8               |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+     +          +----------------+----------------------+----------------------+--------------------------------+
+|                         | 5006021 |     |          | CVE-2025-58186 | v1.25.1              | 1.25.2               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4012)          |
++                         +---------+     +----------+----------------+                      +----------------------+--------------------------------+
+|                         | 5006453 |     | 108 days | CVE-2025-61727 |                      | 1.25.5               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2025-4175)          |
++                         +         +     +          +                +----------------------+----------------------+                                +
+|                         |         |     |          |                | v1.24.6              | 1.24.11              |                                |
+|                         |         |     |          |                |                      |                      |                                |
++                         +---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+|                         | 5008845 | 20  | 12 days  | CVE-2026-27139 | v1.25.1              | 1.25.8               | Go (Go) Security Update for    |
+|                         |         |     |          |                |                      |                      | stdlib (GO-2026-4602)          |
++                         +         +     +          +                +----------------------+                      +                                +
+|                         |         |     |          |                | v1.24.6              |                      |                                |
+|                         |         |     |          |                |                      |                      |                                |
++-------------------------+---------+-----+----------+----------------+----------------------+----------------------+--------------------------------+
+2026-03-23T19:06:48.278Z	INFO	For more details refer /root/qualys/qscanner/data/2bcb7d9cef676719eb19b34b03dfd326df9ba63167a972abe9ccee300b2895c2-Report.sarif.json
+2026-03-23T19:06:48.278Z	INFO	Skipping policy evaluation
+2026-03-23T19:06:48.278Z	DEBUG	Cleaning up scan target
+</pre></details>
             </div>
         </div>
         
@@ -2033,7 +2814,7 @@
             <td></td>
             <td>48 days</td>
             <td><code>CVE-2026-24051</code></td>
-            <td><code>v1.30.0</code></td>
+            <td><code>v1.38.0</code></td>
             <td><code>1.40.0</code></td>
             <td style="max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="Go (Go) Security Update for go.opentelemetry.io/otel/sdk/resource (GHSA-9h8m-3fm2-qjrq)">Go (Go) Security Update for go.opentelemetry.io/otel/sdk/resource (GHSA-9h8m-3fm2-qjrq)</td>
         </tr>
@@ -2379,7 +3160,380 @@
             <td align="center"><b>180 days</b></td>
             <td><font color="#388e3c">168 days remaining</font></td>
         </tr></tbody>
-    </table></div>
+    </table></div><details style="margin-top:8px;"><summary style="cursor:pointer;font-weight:600;">QScanner Full Log (374 lines)</summary><pre style="max-height:500px;overflow:auto;background:#f9f9f9;padding:12px;border-radius:6px;font-size:11px;">Using logfile /root/qualys/qscanner/data/qscanner.log
+   ____    _____
+  / __ \  / ___/  _____  ____ _   ____    ____   ___    _____
+ / / / /  \__ \  / ___/ / __ `/  / __ \  / __ \ / _ \  / ___/
+/ /_/ /  ___/ / / /__  / /_/ /  / / / / / / / //  __/ / /
+\___\_\ /____/  \___/  \__,_/  /_/ /_/ /_/ /_/ \___/ /_/
+
+By Qualys | version: 4.8.0-3
+
+2026-03-23T19:06:51.574Z	INFO	New instance of qscanner-4.8.0-3 started with invocation ID ee9f91c1-2d4c-41ef-a789-ce3f3940b2b1
+2026-03-23T19:06:51.574Z	DEBUG	Created process-specific temp directory: /tmp/qscanner-44327
+2026-03-23T19:06:51.575Z	DEBUG	Global Options: {
+    "LogLevel": "debug",
+    "SilentMode": false,
+    "FileLogging": true,
+    "BackendLogging": false,
+    "OutputDir": "/root/qualys/qscanner/data",
+    "TargetKind": "image",
+    "GatewayURL": "https://gateway.qg1.apps.qualys.com",
+    "AccessToken": "********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************",
+    "ClientID": "",
+    "ClientSecret": "",
+    "CacheAuthToken": false,
+    "CertPath": "",
+    "SkipTLSVerification": true,
+    "UseProxy": "",
+    "FragmentSizeInKB": 390,
+    "CacheDir": "/root/.cache/qualys/qscanner",
+    "RunProfiler": false,
+    "ShowPerfStat": false,
+    "PerfStatInterval": 1000000000,
+    "MaxNetworkRetries": 10,
+    "NetworkRetryWaitMin": 5000000000,
+    "NetworkRetryWaitMax": 120000000000,
+    "PerformVersionCheck": true
+}
+2026-03-23T19:06:51.575Z	DEBUG	Version check metadata loaded from /root/.cache/qualys/qscanner/version_check_metadata.json
+2026-03-23T19:06:51.575Z	INFO	Fetching image details
+2026-03-23T19:06:51.578Z	INFO	Image source: docker
+2026-03-23T19:06:51.578Z	INFO	Image present locally. Consider using '--storage-driver docker-overlay2' for faster scan
+2026-03-23T19:06:51.578Z	DEBUG	Image ID: d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d
+2026-03-23T19:06:51.578Z	DEBUG	Layer SHAs:
+2026-03-23T19:06:51.578Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:06:51.579Z	DEBUG	 2) 18fe8a653990a6593423bf4314a5cfee57cca88a2d1455d94b0f20b4f16516cc
+2026-03-23T19:06:51.579Z	DEBUG	 3) 53302032bc579d324deddb31c391902836a552dc73a54fe246cc4ae7073ea449
+2026-03-23T19:06:51.579Z	DEBUG	 4) 04314291c6ede16268fea051e993ab3352f3a6741c8cddedabb679cb87f320b6
+2026-03-23T19:06:51.579Z	DEBUG	 5) 89e41968cc1d4388276b36736e7fbd6862570c0be2b009d64ebbb1ca07714061
+2026-03-23T19:06:51.579Z	DEBUG	 6) 751ca4f52b9bdf5d7c1d975937a13f022d24869534e31ec36100c61275d158d7
+2026-03-23T19:06:51.579Z	DEBUG	 7) dc414f431c0a8f344fc4a73ad40713dc15ac6137b58f485723ae41fb8183620a
+2026-03-23T19:06:51.579Z	DEBUG	 8) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:06:51.579Z	DEBUG	 9) 2321fea0c22e4455ea157a2d088c298a2b9846906e4ad4b80635cd4da1520f6a
+2026-03-23T19:06:51.579Z	DEBUG	10) 5116c79aacdafdfaf9597333cd4df15548aa26cf1654250c15a574cf5f57988b
+2026-03-23T19:06:51.579Z	DEBUG	11) a87691018ca6da3513f81955aed79df8bd800a5cf3a5374f433e5b9b0a4af4ba
+2026-03-23T19:06:51.579Z	DEBUG	12) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:06:51.579Z	DEBUG	13) 2cca04190a38737aaa3a0c637bce283348fe0a7d09b05082e67efcbeccca65a0
+2026-03-23T19:06:51.579Z	DEBUG	Waiting to access local cache DB
+2026-03-23T19:06:51.581Z	DEBUG	Using local cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:06:51.581Z	DEBUG	Target [image] created for [qualys/cluster-sensor:latest], with following options:
+2026-03-23T19:06:51.582Z	DEBUG	Scan Options: {
+    "ScanTypes": [
+        "os",
+        "sca",
+        "fileinsight"
+    ],
+    "OutputFormats": [
+        "db",
+        "json",
+        "spdx"
+    ],
+    "ReportFormats": [
+        "table",
+        "sarif"
+    ],
+    "ExcludeDirs": [],
+    "ExcludeFiles": [],
+    "IncludeDirs": {},
+    "ScanTargetInfo": {},
+    "ShellCommands": {},
+    "ExitIfOSNotFound": false,
+    "ExitIfOSPkgNotFound": false,
+    "SecretConfigFile": "",
+    "SecretConfigRefreshDuration": 86400000000000,
+    "ForceSecretConfigRefresh": false,
+    "OfflineScan": false,
+    "SkipJavaDbUpdate": false,
+    "JavaDbUpdateIntervalInDays": 15,
+    "ScanTimeout": 300000000000,
+    "Mode": 30,
+    "PolicyTags": [],
+    "CacheType": "local",
+    "CacheCleanupDurationThreshold": 3888000000000000,
+    "CacheCleanupFrequency": 604800000000000,
+    "EnableCacheCleanup": true,
+    "DisabledSCALanguages": [],
+    "InputCacheFile": "",
+    "LimitResourceUsage": false,
+    "MultiVolume": false,
+    "MultiPartition": false,
+    "StorageDriver": "none",
+    "RegistryUsername": "",
+    "RegistryPassword": "",
+    "RegistryToken": "",
+    "AllowPartialScan": false,
+    "Platform": "",
+    "ManifestPath": "",
+    "DetectionPriority": "precise",
+    "QDSThreshold": -1,
+    "FileInsightConfigFile": "",
+    "WinRegistryConfigFile": "",
+    "MaskEnvVariables": false,
+    "ScanWritableLayerOnly": false,
+    "CollectBuildPipelineMetadata": false
+}
+2026-03-23T19:06:51.582Z	DEBUG	Registered Metadata Scanner
+2026-03-23T19:06:51.582Z	DEBUG	Registered OS Scanner
+2026-03-23T19:06:51.582Z	DEBUG	Registered SCA Scanner
+2026-03-23T19:06:51.582Z	DEBUG	Registered FileInsight Scanner
+2026-03-23T19:06:51.582Z	DEBUG	PreScan
+2026-03-23T19:06:51.582Z	DEBUG	Using built-in fileinsight-config
+2026-03-23T19:06:51.582Z	INFO	Starting Metadata scan
+2026-03-23T19:06:51.582Z	INFO	Metadata scan completed in 210.776µs
+2026-03-23T19:06:51.582Z	INFO	Starting [os sca fileinsight] scan
+2026-03-23T19:06:51.582Z	DEBUG	Base Layers:
+2026-03-23T19:06:51.582Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:06:51.588Z	DEBUG	Skipping os scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:51.591Z	DEBUG	Skipping sca scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:51.594Z	DEBUG	Skipping os scan for layer 89e41968cc1d4388276b36736e7fbd6862570c0be2b009d64ebbb1ca07714061. Already cached.
+2026-03-23T19:06:51.596Z	DEBUG	Skipping fileinsight scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:06:51.598Z	DEBUG	Skipping os scan for layer 53302032bc579d324deddb31c391902836a552dc73a54fe246cc4ae7073ea449. Already cached.
+2026-03-23T19:06:51.600Z	DEBUG	Skipping os scan for layer 04314291c6ede16268fea051e993ab3352f3a6741c8cddedabb679cb87f320b6. Already cached.
+2026-03-23T19:06:51.608Z	DEBUG	Skipping os scan for layer 18fe8a653990a6593423bf4314a5cfee57cca88a2d1455d94b0f20b4f16516cc. Already cached.
+2026-03-23T19:06:51.610Z	DEBUG	Skipping sca scan for layer 89e41968cc1d4388276b36736e7fbd6862570c0be2b009d64ebbb1ca07714061. Already cached.
+2026-03-23T19:06:51.619Z	DEBUG	Skipping sca scan for layer 53302032bc579d324deddb31c391902836a552dc73a54fe246cc4ae7073ea449. Already cached.
+2026-03-23T19:06:51.621Z	DEBUG	Skipping sca scan for layer 04314291c6ede16268fea051e993ab3352f3a6741c8cddedabb679cb87f320b6. Already cached.
+2026-03-23T19:06:51.623Z	DEBUG	Skipping sca scan for layer 18fe8a653990a6593423bf4314a5cfee57cca88a2d1455d94b0f20b4f16516cc. Already cached.
+2026-03-23T19:06:51.627Z	DEBUG	Skipping fileinsight scan for layer 89e41968cc1d4388276b36736e7fbd6862570c0be2b009d64ebbb1ca07714061. Already cached.
+2026-03-23T19:06:51.631Z	DEBUG	Skipping fileinsight scan for layer 53302032bc579d324deddb31c391902836a552dc73a54fe246cc4ae7073ea449. Already cached.
+2026-03-23T19:06:51.633Z	DEBUG	Skipping fileinsight scan for layer 04314291c6ede16268fea051e993ab3352f3a6741c8cddedabb679cb87f320b6. Already cached.
+2026-03-23T19:06:51.635Z	DEBUG	Skipping fileinsight scan for layer 18fe8a653990a6593423bf4314a5cfee57cca88a2d1455d94b0f20b4f16516cc. Already cached.
+2026-03-23T19:06:51.643Z	DEBUG	Skipping os scan for layer 751ca4f52b9bdf5d7c1d975937a13f022d24869534e31ec36100c61275d158d7. Already cached.
+2026-03-23T19:06:51.654Z	DEBUG	Skipping sca scan for layer 751ca4f52b9bdf5d7c1d975937a13f022d24869534e31ec36100c61275d158d7. Already cached.
+2026-03-23T19:06:51.665Z	DEBUG	Skipping fileinsight scan for layer 751ca4f52b9bdf5d7c1d975937a13f022d24869534e31ec36100c61275d158d7. Already cached.
+2026-03-23T19:06:51.673Z	DEBUG	Skipping os scan for layer dc414f431c0a8f344fc4a73ad40713dc15ac6137b58f485723ae41fb8183620a. Already cached.
+2026-03-23T19:06:51.677Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.679Z	DEBUG	Skipping os scan for layer 2321fea0c22e4455ea157a2d088c298a2b9846906e4ad4b80635cd4da1520f6a. Already cached.
+2026-03-23T19:06:51.681Z	DEBUG	Skipping os scan for layer 5116c79aacdafdfaf9597333cd4df15548aa26cf1654250c15a574cf5f57988b. Already cached.
+2026-03-23T19:06:51.683Z	DEBUG	Skipping sca scan for layer dc414f431c0a8f344fc4a73ad40713dc15ac6137b58f485723ae41fb8183620a. Already cached.
+2026-03-23T19:06:51.687Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.689Z	DEBUG	Skipping sca scan for layer 2321fea0c22e4455ea157a2d088c298a2b9846906e4ad4b80635cd4da1520f6a. Already cached.
+2026-03-23T19:06:51.691Z	DEBUG	Skipping sca scan for layer 5116c79aacdafdfaf9597333cd4df15548aa26cf1654250c15a574cf5f57988b. Already cached.
+2026-03-23T19:06:51.693Z	DEBUG	Skipping fileinsight scan for layer dc414f431c0a8f344fc4a73ad40713dc15ac6137b58f485723ae41fb8183620a. Already cached.
+2026-03-23T19:06:51.697Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.699Z	DEBUG	Skipping fileinsight scan for layer 2321fea0c22e4455ea157a2d088c298a2b9846906e4ad4b80635cd4da1520f6a. Already cached.
+2026-03-23T19:06:51.701Z	DEBUG	Skipping fileinsight scan for layer 5116c79aacdafdfaf9597333cd4df15548aa26cf1654250c15a574cf5f57988b. Already cached.
+2026-03-23T19:06:51.706Z	DEBUG	Skipping os scan for layer a87691018ca6da3513f81955aed79df8bd800a5cf3a5374f433e5b9b0a4af4ba. Already cached.
+2026-03-23T19:06:51.718Z	DEBUG	Skipping sca scan for layer a87691018ca6da3513f81955aed79df8bd800a5cf3a5374f433e5b9b0a4af4ba. Already cached.
+2026-03-23T19:06:51.729Z	DEBUG	Skipping fileinsight scan for layer a87691018ca6da3513f81955aed79df8bd800a5cf3a5374f433e5b9b0a4af4ba. Already cached.
+2026-03-23T19:06:51.738Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.742Z	DEBUG	Skipping os scan for layer 2cca04190a38737aaa3a0c637bce283348fe0a7d09b05082e67efcbeccca65a0. Already cached.
+2026-03-23T19:06:51.744Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.752Z	DEBUG	Skipping sca scan for layer 2cca04190a38737aaa3a0c637bce283348fe0a7d09b05082e67efcbeccca65a0. Already cached.
+2026-03-23T19:06:51.754Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:06:51.756Z	DEBUG	Skipping fileinsight scan for layer 2cca04190a38737aaa3a0c637bce283348fe0a7d09b05082e67efcbeccca65a0. Already cached.
+2026-03-23T19:06:51.771Z	INFO	[os sca fileinsight] scan completed in 189.153872ms
+2026-03-23T19:06:51.772Z	INFO	OS detected: Oracle Enterprise Linux 8.10
+2026-03-23T19:06:51.772Z	INFO	OS package(s) detected: 103
+2026-03-23T19:06:51.774Z	INFO	Technologies detected (1): [Go]
+2026-03-23T19:06:51.774Z	INFO	Language package(s) detected: 551
+2026-03-23T19:06:51.774Z	INFO	FileInsight findings: 6
+2026-03-23T19:06:51.774Z	INFO	All scans completed in 192.002021ms
+2026-03-23T19:06:51.774Z	DEBUG	Cache cleanup frequency is 168h0m0s. Last cleanup was performed 17h36m1.98557144s ago.
+2026-03-23T19:06:51.774Z	DEBUG	Cache cleanup not required
+2026-03-23T19:06:51.774Z	DEBUG	Closing cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:06:51.774Z	DEBUG	PostScan
+2026-03-23T19:06:51.775Z	DEBUG	Registered JSON Result Output Handler
+2026-03-23T19:06:51.775Z	DEBUG	Registered SPDX Handler
+2026-03-23T19:06:51.775Z	DEBUG	Registered Changelist Output Handler
+2026-03-23T19:06:51.782Z	INFO	Scan Result JSON created at /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ScanResult.json
+2026-03-23T19:06:51.799Z	INFO	SPDX document created at /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ScanResult.spdx.json
+2026-03-23T19:06:51.872Z	DEBUG	Compressed SBOM created at /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ScanResult.spdx.json.xz
+2026-03-23T19:06:51.872Z	INFO	Uploading SBOM /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ScanResult.spdx.json.xz
+2026-03-23T19:06:51.872Z	INFO	Access token expiring on 2027-02-08 05:55:34 +0000 UTC
+2026-03-23T19:06:51.872Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:06:51.872Z	DEBUG	Uploading fragment #1 of 48160 bytes
+2026-03-23T19:06:51.872Z	DEBUG	Finalizing upload
+2026-03-23T19:06:51.872Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:51.872Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:51.872Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/sbom/customer/0631dbea-f39c-6263-820b-2ddf4cd9c95b/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/fragment/1/finalize
+2026-03-23T19:06:52.360Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:52.402Z	DEBUG	Bytes uploaded: 48160
+2026-03-23T19:06:52.402Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:06:52.402Z	DEBUG	Total bytes uploaded: 48160
+2026-03-23T19:06:52.402Z	INFO	SBOM uploaded successfully
+2026-03-23T19:06:52.402Z	INFO	Creating changelist
+2026-03-23T19:06:52.402Z	DEBUG	Creating Metadata table
+2026-03-23T19:06:52.422Z	DEBUG	Metadata table created in 20.073574ms
+2026-03-23T19:06:52.422Z	DEBUG	Creating AgentInfo table
+2026-03-23T19:06:52.442Z	DEBUG	AgentInfo table created in 19.444984ms
+2026-03-23T19:06:52.442Z	DEBUG	Creating UnixCommand table
+2026-03-23T19:06:52.459Z	DEBUG	UnixCommand table created in 17.497107ms
+2026-03-23T19:06:52.459Z	DEBUG	Creating InstalledSoftware table
+2026-03-23T19:06:52.481Z	DEBUG	InstalledSoftware table created in 21.584412ms
+2026-03-23T19:06:52.481Z	DEBUG	Creating SCASoftwareInfo table
+2026-03-23T19:06:52.526Z	DEBUG	SCASoftwareInfo table created in 44.404468ms
+2026-03-23T19:06:52.526Z	DEBUG	Creating SCATechnologiesDetected table
+2026-03-23T19:06:52.547Z	DEBUG	SCATechnologiesDetected table created in 21.032738ms
+2026-03-23T19:06:52.547Z	DEBUG	Creating SCAInstalledSoftwareMap table
+2026-03-23T19:06:52.574Z	DEBUG	SCAInstalledSoftwareMap table created in 27.2931ms
+2026-03-23T19:06:52.574Z	DEBUG	Creating LayerInfo table
+2026-03-23T19:06:52.596Z	DEBUG	LayerInfo table created in 21.727359ms
+2026-03-23T19:06:52.596Z	DEBUG	Changelist DB created at /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ChangeList.db
+2026-03-23T19:06:52.643Z	INFO	Compressed Changelist DB created at /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ChangeList.db.xz
+2026-03-23T19:06:52.643Z	DEBUG	Original changelist removed
+2026-03-23T19:06:52.643Z	INFO	Uploading changelist /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-ChangeList.db.xz
+2026-03-23T19:06:52.643Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:06:52.644Z	DEBUG	Uploading fragment #1 of 48397 bytes
+2026-03-23T19:06:52.644Z	DEBUG	Finalizing upload
+2026-03-23T19:06:52.644Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:52.644Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:52.644Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/asset/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/snapshot/d9939e89-bb90-4911-b69c-c3951b2a8e4e/fragment/1/finalize
+2026-03-23T19:06:53.144Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:53.158Z	DEBUG	Bytes uploaded: 48397
+2026-03-23T19:06:53.158Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:06:53.158Z	DEBUG	Total bytes uploaded: 48397
+2026-03-23T19:06:53.158Z	DEBUG	Publish on Kafka
+2026-03-23T19:06:53.158Z	DEBUG	SSM Task details:
+{
+    "SSMTaskDetails": {
+        "AssetUUID": "d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d",
+        "SnapshotUUID": "d9939e89-bb90-4911-b69c-c3951b2a8e4e",
+        "SnapshotPath": "cms/cli/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/d9939e89-bb90-4911-b69c-c3951b2a8e4e",
+        "SnapshotBucket": "cs-ssm-delta-snapshot",
+        "RequestId": "db1a1a15-8bf1-4e09-a88e-766b1d9a8772",
+        "Platform": "LINUX_SENSOR",
+        "ManifestType": "Vulnerability",
+        "CompressionTechnique": "LZMA",
+        "Source": "qscanner"
+    }
+}
+2026-03-23T19:06:53.158Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:06:53.158Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:06:53.158Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/ssm/task/publish
+2026-03-23T19:06:53.388Z	DEBUG	Response status: 200 OK
+2026-03-23T19:06:53.388Z	INFO	Changelist uploaded successfully
+2026-03-23T19:06:53.389Z	DEBUG	Registered Inventory reporter
+2026-03-23T19:06:53.389Z	DEBUG	Registered Vulnerability reporter
+2026-03-23T19:06:53.389Z	INFO	Skip fetching of policy evaluation result
+2026-03-23T19:06:53.389Z	INFO	Fetching vulnerability report
+2026-03-23T19:07:08.389Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:08.389Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:08.389Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/vuln?imageFilter=lastScanned%3A%5Bnow-18s+..+now%5D
+2026-03-23T19:07:08.633Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:07:08.633Z	DEBUG	Vuln report not yet available
+2026-03-23T19:07:08.633Z	INFO	Status: [404 Not Found]. Retrying in 5s. (attempt 1/10)
+2026-03-23T19:07:13.637Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/vuln?imageFilter=lastScanned%3A%5Bnow-23s+..+now%5D
+2026-03-23T19:07:13.771Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:07:13.772Z	DEBUG	Vuln report not yet available
+2026-03-23T19:07:13.772Z	INFO	Status: [404 Not Found]. Retrying in 10s. (attempt 2/10)
+2026-03-23T19:07:23.778Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d/vuln?imageFilter=lastScanned%3A%5Bnow-33s+..+now%5D
+2026-03-23T19:07:24.088Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:24.194Z	INFO	Vulnerability report received
+2026-03-23T19:07:24.194Z	INFO	22 vulnerabilities found!
+2026-03-23T19:07:24.194Z	INFO	  Severity 5: 0
+2026-03-23T19:07:24.194Z	INFO	  Severity 4: 13
+2026-03-23T19:07:24.194Z	INFO	  Severity 3: 8
+2026-03-23T19:07:24.194Z	INFO	  Severity 2: 1
+2026-03-23T19:07:24.194Z	INFO	  Severity 1: 0
+
+Vulnerabilities:
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+|              SOFTWARE NAME              |   QID   | QDS | VULN AGE |     CVE(S)     |  INSTALLED VERSION   |    FIXED VERSION     |                 SUMMARY                 |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| brotli                                  | 163986  | 42  | 39 days  | CVE-2025-6176  | 1.0.6-3.el8          | 1.0.6-4.el8_10       | Oracle Enterprise Linux                 |
+|                                         |         |     |          |                |                      |                      | Security Update for brotli              |
+|                                         |         |     |          |                |                      |                      | (ELSA-2026-2389)                        |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/cilium/cilium                | 5007852 | 30  | 31 days  | CVE-2026-26963 | v1.18.4              | 1.18.6               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/cilium/cilium                |
+|                                         |         |     |          |                |                      |                      | (GHSA-5r23-prx4-mqg3)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/cloudflare/circl             | 5007991 | 20  | 25 days  | CVE-2026-1229  | v1.6.1               | 1.6.3                | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/cloudflare/circl             |
+|                                         |         |     |          |                |                      |                      | (GHSA-q9hv-hpm4-hj6x)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/docker/cli                   | 5008764 | 35  | 14 days  | CVE-2025-15558 | v29.0.3+incompatible | 29.2.0               | Go (Go) Security Update                 |
+|                                         |         |     |          |                |                      |                      | for github.com/docker/cli               |
+|                                         |         |     |          |                |                      |                      | (GHSA-p436-gjf2-799p)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/go-git/go-git/v5             | 5007568 | 30  | 39 days  | CVE-2026-25934 | v5.16.3              | 5.16.5               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/go-git/go-git/v5             |
+|                                         |         |     |          |                |                      |                      | (GHSA-37cx-329c-33x3)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/sigstore/fulcio              | 5006942 | 37  | 68 days  | CVE-2026-22772 | v1.8.3               | 1.8.5                | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/sigstore/fulcio              |
+|                                         |         |     |          |                |                      |                      | (GHSA-59jp-pj84-45mr)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/sigstore/sigstore            | 5007145 | 30  | 59 days  | CVE-2026-24137 | v1.10.0              | 1.10.4               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/sigstore/sigstore            |
+|                                         |         |     |          |                |                      |                      | (GHSA-fcv2-xgw5-pqxf)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| github.com/theupdateframework/go-tuf/v2 | 5007215 | 37  | 54 days  | CVE-2026-24686 | v2.3.0               | 2.4.1                | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/theupdateframework/go-tuf/v2 |
+|                                         |         |     |          |                |                      |                      | (GHSA-jqc5-w2xx-5vq4)                   |
++                                         +---------+-----+----------+----------------+                      +----------------------+-----------------------------------------+
+|                                         | 5007092 | 35  | 60 days  | CVE-2026-23992 |                      | 2.3.1                | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/theupdateframework/go-tuf/v2 |
+|                                         |         |     |          |                |                      |                      | (GHSA-fphv-w9fq-2525)                   |
++                                         +---------+     +          +----------------+                      +                      +-----------------------------------------+
+|                                         | 5007091 |     |          | CVE-2026-23991 |                      |                      | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | github.com/theupdateframework/go-tuf/v2 |
+|                                         |         |     |          |                |                      |                      | (GHSA-846p-jg2w-w324)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| glib2                                   | 163878  | 42  | 55 days  | CVE-2025-13601 | 2.56.4-167.el8_10    | 2.56.4-168.el8_10    | Oracle Enterprise Linux                 |
+|                                         |         |     |          |                |                      |                      | Security Update for glib2               |
+|                                         |         |     |          |                |                      |                      | (ELSA-2026-0991)                        |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| gnupg2                                  | 163846  | 35  | 63 days  | CVE-2025-68973 | 2.2.20-3.el8_6       | 2.2.20-4.el8_10      | Oracle Enterprise Linux                 |
+|                                         |         |     |          |                |                      |                      | Security Update for gnupg2              |
+|                                         |         |     |          |                |                      |                      | (ELSA-2026-0728)                        |
++-----------------------------------------+---------+     +----------+----------------+----------------------+----------------------+-----------------------------------------+
+| go.opentelemetry.io/otel/sdk            | 5007318 |     | 48 days  | CVE-2026-24051 | v1.38.0              | 1.40.0               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | go.opentelemetry.io/otel/sdk/resource   |
+|                                         |         |     |          |                |                      |                      | (GHSA-9h8m-3fm2-qjrq)                   |
++                                         +         +     +          +                +----------------------+                      +                                         +
+|                                         |         |     |          |                | v1.30.0              |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| libblkid                                | 163952  | 30  | 42 days  | CVE-2025-14104 | 2.32.1-47.0.1.el8_10 | 2.32.1-48.0.1.el8_10 | Oracle Enterprise Linux                 |
+|                                         |         |     |          |                |                      |                      | Security Update for util-linux          |
+|                                         |         |     |          |                |                      |                      | (ELSA-2026-1852)                        |
++-----------------------------------------+         +     +          +                +                      +                      +                                         +
+| libmount                                |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
++-----------------------------------------+         +     +          +                +                      +                      +                                         +
+| libsmartcols                            |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
++-----------------------------------------+         +     +          +                +                      +                      +                                         +
+| libuuid                                 |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
+|                                         |         |     |          |                |                      |                      |                                         |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| openssl-libs                            | 164051  | 35  | 26 days  | CVE-2025-69419 | 1.1.1k-14.el8_10     | 1.1.1k-15.el8_6      | Oracle Enterprise Linux                 |
+|                                         |         |     |          |                |                      |                      | Security Update for Open                |
+|                                         |         |     |          |                |                      |                      | Secure Sockets Layer (OpenSSL)          |
+|                                         |         |     |          |                |                      |                      | (ELSA-2026-3042)                        |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+| stdlib                                  | 5007494 | 72  | 45 days  | CVE-2025-68121 | v1.25.5              | 1.25.7               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4337)                   |
++                                         +---------+-----+----------+----------------+                      +----------------------+-----------------------------------------+
+|                                         | 5007268 | 37  | 53 days  | CVE-2025-61728 |                      | 1.25.6               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4342)                   |
++                                         +---------+-----+----------+----------------+                      +----------------------+-----------------------------------------+
+|                                         | 5008844 | 35  | 12 days  | CVE-2026-25679 |                      | 1.25.8               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4601)                   |
++                                         +---------+     +----------+----------------+                      +----------------------+-----------------------------------------+
+|                                         | 5007266 |     | 53 days  | CVE-2025-61726 |                      | 1.25.6               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4341)                   |
++                                         +---------+-----+          +----------------+                      +                      +-----------------------------------------+
+|                                         | 5007264 | 30  |          | CVE-2025-61730 |                      |                      | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4340)                   |
++                                         +---------+     +----------+----------------+                      +----------------------+-----------------------------------------+
+|                                         | 5008848 |     | 12 days  | CVE-2026-27142 |                      | 1.25.8               | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4603)                   |
++                                         +---------+-----+          +----------------+                      +                      +-----------------------------------------+
+|                                         | 5008845 | 20  |          | CVE-2026-27139 |                      |                      | Go (Go) Security Update for             |
+|                                         |         |     |          |                |                      |                      | stdlib (GO-2026-4602)                   |
++-----------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-----------------------------------------+
+2026-03-23T19:07:24.205Z	INFO	For more details refer /root/qualys/qscanner/data/d81782cbfda93c6466468ed769558978a0075c462b78c2256a19df39ba80f56d-Report.sarif.json
+2026-03-23T19:07:24.205Z	INFO	Skipping policy evaluation
+2026-03-23T19:07:24.205Z	DEBUG	Cleaning up scan target
+</pre></details>
             </div>
         </div>
         
@@ -2577,7 +3731,290 @@
             <td align="center"><b>30 days</b></td>
             <td><font color="#d32f2f"><b>OVERDUE by 18 days</b></font></td>
         </tr></tbody>
-    </table></div>
+    </table></div><details style="margin-top:8px;"><summary style="cursor:pointer;font-weight:600;">QScanner Full Log (284 lines)</summary><pre style="max-height:500px;overflow:auto;background:#f9f9f9;padding:12px;border-radius:6px;font-size:11px;">Using logfile /root/qualys/qscanner/data/qscanner.log
+   ____    _____
+  / __ \  / ___/  _____  ____ _   ____    ____   ___    _____
+ / / / /  \__ \  / ___/ / __ `/  / __ \  / __ \ / _ \  / ___/
+/ /_/ /  ___/ / / /__  / /_/ /  / / / / / / / //  __/ / /
+\___\_\ /____/  \___/  \__,_/  /_/ /_/ /_/ /_/ \___/ /_/
+
+By Qualys | version: 4.8.0-3
+
+2026-03-23T19:07:25.531Z	INFO	New instance of qscanner-4.8.0-3 started with invocation ID f3b450a4-6f14-4ee8-91ff-58788cc7387f
+2026-03-23T19:07:25.532Z	DEBUG	Created process-specific temp directory: /tmp/qscanner-44404
+2026-03-23T19:07:25.532Z	DEBUG	Global Options: {
+    "LogLevel": "debug",
+    "SilentMode": false,
+    "FileLogging": true,
+    "BackendLogging": false,
+    "OutputDir": "/root/qualys/qscanner/data",
+    "TargetKind": "image",
+    "GatewayURL": "https://gateway.qg1.apps.qualys.com",
+    "AccessToken": "********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************",
+    "ClientID": "",
+    "ClientSecret": "",
+    "CacheAuthToken": false,
+    "CertPath": "",
+    "SkipTLSVerification": true,
+    "UseProxy": "",
+    "FragmentSizeInKB": 390,
+    "CacheDir": "/root/.cache/qualys/qscanner",
+    "RunProfiler": false,
+    "ShowPerfStat": false,
+    "PerfStatInterval": 1000000000,
+    "MaxNetworkRetries": 10,
+    "NetworkRetryWaitMin": 5000000000,
+    "NetworkRetryWaitMax": 120000000000,
+    "PerformVersionCheck": true
+}
+2026-03-23T19:07:25.532Z	DEBUG	Version check metadata loaded from /root/.cache/qualys/qscanner/version_check_metadata.json
+2026-03-23T19:07:25.532Z	INFO	Fetching image details
+2026-03-23T19:07:25.536Z	INFO	Image source: docker
+2026-03-23T19:07:25.536Z	INFO	Image present locally. Consider using '--storage-driver docker-overlay2' for faster scan
+2026-03-23T19:07:25.536Z	DEBUG	Image ID: dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8
+2026-03-23T19:07:25.536Z	DEBUG	Layer SHAs:
+2026-03-23T19:07:25.536Z	DEBUG	 1) 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169
+2026-03-23T19:07:25.536Z	DEBUG	 2) 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195
+2026-03-23T19:07:25.536Z	DEBUG	 3) e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a
+2026-03-23T19:07:25.536Z	DEBUG	 4) 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb
+2026-03-23T19:07:25.536Z	DEBUG	 5) e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16
+2026-03-23T19:07:25.536Z	DEBUG	 6) b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf
+2026-03-23T19:07:25.536Z	DEBUG	 7) a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487
+2026-03-23T19:07:25.536Z	DEBUG	 8) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:07:25.536Z	DEBUG	 9) 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e
+2026-03-23T19:07:25.536Z	DEBUG	10) 07e2b86cdf004a019caa305988474d31f80b5d852ace2e6dc2a27739dcba8e8c
+2026-03-23T19:07:25.536Z	DEBUG	11) ba1367c120d5b7ff5df6a7e5a0a492fdecc6f8164014d844ab52750483b8e4a5
+2026-03-23T19:07:25.536Z	DEBUG	12) 5df4190143ccdd4f6eda4f9f63451672a12dde7b4893dee138c4885652fa25ec
+2026-03-23T19:07:25.536Z	DEBUG	13) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:07:25.536Z	DEBUG	Waiting to access local cache DB
+2026-03-23T19:07:25.550Z	DEBUG	Using local cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:07:25.550Z	DEBUG	Target [image] created for [qualys/qscanner:latest], with following options:
+2026-03-23T19:07:25.550Z	DEBUG	Scan Options: {
+    "ScanTypes": [
+        "os",
+        "sca",
+        "fileinsight"
+    ],
+    "OutputFormats": [
+        "db",
+        "json",
+        "spdx"
+    ],
+    "ReportFormats": [
+        "table",
+        "sarif"
+    ],
+    "ExcludeDirs": [],
+    "ExcludeFiles": [],
+    "IncludeDirs": {},
+    "ScanTargetInfo": {},
+    "ShellCommands": {},
+    "ExitIfOSNotFound": false,
+    "ExitIfOSPkgNotFound": false,
+    "SecretConfigFile": "",
+    "SecretConfigRefreshDuration": 86400000000000,
+    "ForceSecretConfigRefresh": false,
+    "OfflineScan": false,
+    "SkipJavaDbUpdate": false,
+    "JavaDbUpdateIntervalInDays": 15,
+    "ScanTimeout": 300000000000,
+    "Mode": 30,
+    "PolicyTags": [],
+    "CacheType": "local",
+    "CacheCleanupDurationThreshold": 3888000000000000,
+    "CacheCleanupFrequency": 604800000000000,
+    "EnableCacheCleanup": true,
+    "DisabledSCALanguages": [],
+    "InputCacheFile": "",
+    "LimitResourceUsage": false,
+    "MultiVolume": false,
+    "MultiPartition": false,
+    "StorageDriver": "none",
+    "RegistryUsername": "",
+    "RegistryPassword": "",
+    "RegistryToken": "",
+    "AllowPartialScan": false,
+    "Platform": "",
+    "ManifestPath": "",
+    "DetectionPriority": "precise",
+    "QDSThreshold": -1,
+    "FileInsightConfigFile": "",
+    "WinRegistryConfigFile": "",
+    "MaskEnvVariables": false,
+    "ScanWritableLayerOnly": false,
+    "CollectBuildPipelineMetadata": false
+}
+2026-03-23T19:07:25.550Z	DEBUG	Registered Metadata Scanner
+2026-03-23T19:07:25.551Z	DEBUG	Registered OS Scanner
+2026-03-23T19:07:25.551Z	DEBUG	Registered SCA Scanner
+2026-03-23T19:07:25.551Z	DEBUG	Registered FileInsight Scanner
+2026-03-23T19:07:25.551Z	DEBUG	PreScan
+2026-03-23T19:07:25.551Z	DEBUG	Using built-in fileinsight-config
+2026-03-23T19:07:25.551Z	INFO	Starting Metadata scan
+2026-03-23T19:07:25.551Z	INFO	Metadata scan completed in 211.151µs
+2026-03-23T19:07:25.551Z	INFO	Starting [os sca fileinsight] scan
+2026-03-23T19:07:25.551Z	DEBUG	Base Layers:
+2026-03-23T19:07:25.551Z	DEBUG	 1) 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169
+2026-03-23T19:07:25.566Z	DEBUG	Skipping os scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:07:25.579Z	DEBUG	Skipping os scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:07:25.588Z	DEBUG	Skipping os scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:07:25.594Z	DEBUG	Skipping os scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:07:25.600Z	DEBUG	Skipping os scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:07:25.608Z	DEBUG	Skipping sca scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:07:25.614Z	DEBUG	Skipping sca scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:07:25.619Z	DEBUG	Skipping sca scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:07:25.623Z	DEBUG	Skipping sca scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:07:25.626Z	DEBUG	Skipping sca scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:07:25.629Z	DEBUG	Skipping fileinsight scan for layer 3ffcfd0ef8bb2c546d92b3ea2b9e228514f16bfb2fa14cdef8982c0f1f22e6bb. Already cached.
+2026-03-23T19:07:25.631Z	DEBUG	Skipping fileinsight scan for layer 8ac16a1ebc33d1d33b322560d016606a571ff3f2bae3fe48ff1d8a6a68b8e169. Already cached.
+2026-03-23T19:07:25.633Z	DEBUG	Skipping fileinsight scan for layer e1c3443def6f4159385695699fb661461cf974d60caee604bf17909c7374fa16. Already cached.
+2026-03-23T19:07:25.635Z	DEBUG	Skipping fileinsight scan for layer 5fd661930714a29c98fbba05b27b9476eb27433a04408efaba6af47c4fcc5195. Already cached.
+2026-03-23T19:07:25.638Z	DEBUG	Skipping fileinsight scan for layer e03247beacf6d31b6c0c1bb088e54e8fc219a6242dfc793bd43376b426607c9a. Already cached.
+2026-03-23T19:07:25.671Z	DEBUG	Skipping os scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:07:25.683Z	DEBUG	Skipping sca scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:07:25.685Z	DEBUG	Skipping os scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:07:25.688Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.690Z	DEBUG	Skipping os scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:07:25.692Z	DEBUG	Skipping os scan for layer 07e2b86cdf004a019caa305988474d31f80b5d852ace2e6dc2a27739dcba8e8c. Already cached.
+2026-03-23T19:07:25.694Z	DEBUG	Skipping fileinsight scan for layer b72e6b87c406b1243e1fa189d66a10aa1f3c53d99a6d06e1780f4a4210accbdf. Already cached.
+2026-03-23T19:07:25.696Z	DEBUG	Skipping sca scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:07:25.698Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.700Z	DEBUG	Skipping sca scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:07:25.703Z	DEBUG	Skipping sca scan for layer 07e2b86cdf004a019caa305988474d31f80b5d852ace2e6dc2a27739dcba8e8c. Already cached.
+2026-03-23T19:07:25.707Z	DEBUG	Skipping fileinsight scan for layer a3c38da4a829ef1d75afe7de28060a7a97f90b1123244bd155de8c3d5eb8c487. Already cached.
+2026-03-23T19:07:25.709Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.711Z	DEBUG	Skipping fileinsight scan for layer 5e0a84e74bee51b52da4bf8ada053be4271e5e6f797fda4cf1bfae184d09af9e. Already cached.
+2026-03-23T19:07:25.713Z	DEBUG	Skipping fileinsight scan for layer 07e2b86cdf004a019caa305988474d31f80b5d852ace2e6dc2a27739dcba8e8c. Already cached.
+2026-03-23T19:07:25.738Z	DEBUG	Skipping os scan for layer ba1367c120d5b7ff5df6a7e5a0a492fdecc6f8164014d844ab52750483b8e4a5. Already cached.
+2026-03-23T19:07:25.771Z	DEBUG	Skipping os scan for layer 5df4190143ccdd4f6eda4f9f63451672a12dde7b4893dee138c4885652fa25ec. Already cached.
+2026-03-23T19:07:25.774Z	DEBUG	Skipping sca scan for layer ba1367c120d5b7ff5df6a7e5a0a492fdecc6f8164014d844ab52750483b8e4a5. Already cached.
+2026-03-23T19:07:25.776Z	DEBUG	Skipping fileinsight scan for layer ba1367c120d5b7ff5df6a7e5a0a492fdecc6f8164014d844ab52750483b8e4a5. Already cached.
+2026-03-23T19:07:25.779Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.781Z	DEBUG	Skipping sca scan for layer 5df4190143ccdd4f6eda4f9f63451672a12dde7b4893dee138c4885652fa25ec. Already cached.
+2026-03-23T19:07:25.785Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.787Z	DEBUG	Skipping fileinsight scan for layer 5df4190143ccdd4f6eda4f9f63451672a12dde7b4893dee138c4885652fa25ec. Already cached.
+2026-03-23T19:07:25.792Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:25.807Z	INFO	[os sca fileinsight] scan completed in 255.766866ms
+2026-03-23T19:07:25.807Z	INFO	OS detected: Oracle Enterprise Linux 8.10
+2026-03-23T19:07:25.807Z	INFO	OS package(s) detected: 104
+2026-03-23T19:07:25.808Z	INFO	Technologies detected (1): [Go]
+2026-03-23T19:07:25.808Z	INFO	Language package(s) detected: 350
+2026-03-23T19:07:25.808Z	INFO	FileInsight findings: 6
+2026-03-23T19:07:25.808Z	INFO	All scans completed in 257.884479ms
+2026-03-23T19:07:25.809Z	DEBUG	Cache cleanup frequency is 168h0m0s. Last cleanup was performed 17h36m36.020172526s ago.
+2026-03-23T19:07:25.809Z	DEBUG	Cache cleanup not required
+2026-03-23T19:07:25.809Z	DEBUG	Closing cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:07:25.809Z	DEBUG	PostScan
+2026-03-23T19:07:25.809Z	DEBUG	Registered JSON Result Output Handler
+2026-03-23T19:07:25.809Z	DEBUG	Registered SPDX Handler
+2026-03-23T19:07:25.809Z	DEBUG	Registered Changelist Output Handler
+2026-03-23T19:07:25.814Z	INFO	Scan Result JSON created at /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ScanResult.json
+2026-03-23T19:07:25.829Z	INFO	SPDX document created at /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ScanResult.spdx.json
+2026-03-23T19:07:25.884Z	DEBUG	Compressed SBOM created at /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ScanResult.spdx.json.xz
+2026-03-23T19:07:25.884Z	INFO	Uploading SBOM /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ScanResult.spdx.json.xz
+2026-03-23T19:07:25.884Z	INFO	Access token expiring on 2027-02-08 05:55:34 +0000 UTC
+2026-03-23T19:07:25.885Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:07:25.885Z	DEBUG	Uploading fragment #1 of 35213 bytes
+2026-03-23T19:07:25.885Z	DEBUG	Finalizing upload
+2026-03-23T19:07:25.885Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:25.885Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:25.885Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/sbom/customer/0631dbea-f39c-6263-820b-2ddf4cd9c95b/image/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8/fragment/1/finalize
+2026-03-23T19:07:26.329Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:26.571Z	DEBUG	Bytes uploaded: 35213
+2026-03-23T19:07:26.571Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:07:26.571Z	DEBUG	Total bytes uploaded: 35213
+2026-03-23T19:07:26.571Z	INFO	SBOM uploaded successfully
+2026-03-23T19:07:26.572Z	INFO	Creating changelist
+2026-03-23T19:07:26.572Z	DEBUG	Creating Metadata table
+2026-03-23T19:07:26.591Z	DEBUG	Metadata table created in 18.856779ms
+2026-03-23T19:07:26.591Z	DEBUG	Creating AgentInfo table
+2026-03-23T19:07:26.609Z	DEBUG	AgentInfo table created in 18.750108ms
+2026-03-23T19:07:26.609Z	DEBUG	Creating UnixCommand table
+2026-03-23T19:07:26.628Z	DEBUG	UnixCommand table created in 18.4904ms
+2026-03-23T19:07:26.628Z	DEBUG	Creating InstalledSoftware table
+2026-03-23T19:07:26.649Z	DEBUG	InstalledSoftware table created in 20.910752ms
+2026-03-23T19:07:26.649Z	DEBUG	Creating SCASoftwareInfo table
+2026-03-23T19:07:26.676Z	DEBUG	SCASoftwareInfo table created in 27.223738ms
+2026-03-23T19:07:26.676Z	DEBUG	Creating SCATechnologiesDetected table
+2026-03-23T19:07:26.699Z	DEBUG	SCATechnologiesDetected table created in 23.081778ms
+2026-03-23T19:07:26.699Z	DEBUG	Creating SCAInstalledSoftwareMap table
+2026-03-23T19:07:26.721Z	DEBUG	SCAInstalledSoftwareMap table created in 21.639005ms
+2026-03-23T19:07:26.721Z	DEBUG	Creating LayerInfo table
+2026-03-23T19:07:26.740Z	DEBUG	LayerInfo table created in 19.151901ms
+2026-03-23T19:07:26.740Z	DEBUG	Changelist DB created at /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ChangeList.db
+2026-03-23T19:07:26.783Z	INFO	Compressed Changelist DB created at /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ChangeList.db.xz
+2026-03-23T19:07:26.783Z	DEBUG	Original changelist removed
+2026-03-23T19:07:26.783Z	INFO	Uploading changelist /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-ChangeList.db.xz
+2026-03-23T19:07:26.783Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:07:26.784Z	DEBUG	Uploading fragment #1 of 35993 bytes
+2026-03-23T19:07:26.784Z	DEBUG	Finalizing upload
+2026-03-23T19:07:26.784Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:26.784Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:26.784Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/asset/image/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8/snapshot/40801d1e-06ae-4b8b-ba4c-6debdaa1f365/fragment/1/finalize
+2026-03-23T19:07:27.223Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:27.238Z	DEBUG	Bytes uploaded: 35993
+2026-03-23T19:07:27.238Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:07:27.238Z	DEBUG	Total bytes uploaded: 35993
+2026-03-23T19:07:27.238Z	DEBUG	Publish on Kafka
+2026-03-23T19:07:27.238Z	DEBUG	SSM Task details:
+{
+    "SSMTaskDetails": {
+        "AssetUUID": "dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8",
+        "SnapshotUUID": "40801d1e-06ae-4b8b-ba4c-6debdaa1f365",
+        "SnapshotPath": "cms/cli/image/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8/40801d1e-06ae-4b8b-ba4c-6debdaa1f365",
+        "SnapshotBucket": "cs-ssm-delta-snapshot",
+        "RequestId": "b98e1102-2b9b-4f30-a865-2b144825350c",
+        "Platform": "LINUX_SENSOR",
+        "ManifestType": "Vulnerability",
+        "CompressionTechnique": "LZMA",
+        "Source": "qscanner"
+    }
+}
+2026-03-23T19:07:27.238Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:27.238Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:27.238Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/ssm/task/publish
+2026-03-23T19:07:27.477Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:27.477Z	INFO	Changelist uploaded successfully
+2026-03-23T19:07:27.477Z	DEBUG	Registered Inventory reporter
+2026-03-23T19:07:27.477Z	DEBUG	Registered Vulnerability reporter
+2026-03-23T19:07:27.477Z	INFO	Skip fetching of policy evaluation result
+2026-03-23T19:07:27.477Z	INFO	Fetching vulnerability report
+2026-03-23T19:07:42.489Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:42.489Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:42.489Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8/vuln?imageFilter=lastScanned%3A%5Bnow-18s+..+now%5D
+2026-03-23T19:07:42.888Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:07:42.888Z	DEBUG	Vuln report not yet available
+2026-03-23T19:07:42.888Z	INFO	Status: [404 Not Found]. Retrying in 5s. (attempt 1/10)
+2026-03-23T19:07:47.889Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8/vuln?imageFilter=lastScanned%3A%5Bnow-23s+..+now%5D
+2026-03-23T19:07:48.156Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:48.156Z	INFO	Vulnerability report received
+2026-03-23T19:07:48.156Z	INFO	3 vulnerabilities found!
+2026-03-23T19:07:48.156Z	INFO	  Severity 5: 0
+2026-03-23T19:07:48.156Z	INFO	  Severity 4: 2
+2026-03-23T19:07:48.156Z	INFO	  Severity 3: 0
+2026-03-23T19:07:48.156Z	INFO	  Severity 2: 1
+2026-03-23T19:07:48.156Z	INFO	  Severity 1: 0
+
+Vulnerabilities:
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+|        SOFTWARE NAME         |   QID   | QDS | VULN AGE |     CVE(S)     |  INSTALLED VERSION   | FIXED VERSION |                SUMMARY                |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+| github.com/cloudflare/circl  | 5007991 | 20  | 25 days  | CVE-2026-1229  | v1.6.1               | 1.6.3         | Go (Go) Security Update for           |
+|                              |         |     |          |                |                      |               | github.com/cloudflare/circl           |
+|                              |         |     |          |                |                      |               | (GHSA-q9hv-hpm4-hj6x)                 |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+| github.com/docker/cli        | 5008764 | 35  | 14 days  | CVE-2025-15558 | v29.0.3+incompatible | 29.2.0        | Go (Go) Security Update               |
+|                              |         |     |          |                |                      |               | for github.com/docker/cli             |
+|                              |         |     |          |                |                      |               | (GHSA-p436-gjf2-799p)                 |
++------------------------------+---------+     +----------+----------------+----------------------+---------------+---------------------------------------+
+| go.opentelemetry.io/otel/sdk | 5007318 |     | 48 days  | CVE-2026-24051 | v1.38.0              | 1.40.0        | Go (Go) Security Update for           |
+|                              |         |     |          |                |                      |               | go.opentelemetry.io/otel/sdk/resource |
+|                              |         |     |          |                |                      |               | (GHSA-9h8m-3fm2-qjrq)                 |
++------------------------------+---------+-----+----------+----------------+----------------------+---------------+---------------------------------------+
+2026-03-23T19:07:48.159Z	INFO	For more details refer /root/qualys/qscanner/data/dce13e3ee9eea7edbfa06a301c60e075f277ec5bfcea2f736f0ec645cd95d4c8-Report.sarif.json
+2026-03-23T19:07:48.159Z	INFO	Skipping policy evaluation
+2026-03-23T19:07:48.159Z	DEBUG	Cleaning up scan target
+</pre></details>
             </div>
         </div>
         
@@ -3241,13 +4678,408 @@
             <td align="center"><b>180 days</b></td>
             <td><font color="#388e3c">168 days remaining</font></td>
         </tr></tbody>
-    </table></div>
+    </table></div><details style="margin-top:8px;"><summary style="cursor:pointer;font-weight:600;">QScanner Full Log (396 lines)</summary><pre style="max-height:500px;overflow:auto;background:#f9f9f9;padding:12px;border-radius:6px;font-size:11px;">Using logfile /root/qualys/qscanner/data/qscanner.log
+   ____    _____
+  / __ \  / ___/  _____  ____ _   ____    ____   ___    _____
+ / / / /  \__ \  / ___/ / __ `/  / __ \  / __ \ / _ \  / ___/
+/ /_/ /  ___/ / / /__  / /_/ /  / / / / / / / //  __/ / /
+\___\_\ /____/  \___/  \__,_/  /_/ /_/ /_/ /_/ \___/ /_/
+
+By Qualys | version: 4.8.0-3
+
+2026-03-23T19:07:53.383Z	INFO	New instance of qscanner-4.8.0-3 started with invocation ID abbaeb10-b313-413a-88c7-dab519fa8258
+2026-03-23T19:07:53.383Z	DEBUG	Created process-specific temp directory: /tmp/qscanner-44542
+2026-03-23T19:07:53.383Z	DEBUG	Global Options: {
+    "LogLevel": "debug",
+    "SilentMode": false,
+    "FileLogging": true,
+    "BackendLogging": false,
+    "OutputDir": "/root/qualys/qscanner/data",
+    "TargetKind": "image",
+    "GatewayURL": "https://gateway.qg1.apps.qualys.com",
+    "AccessToken": "********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************",
+    "ClientID": "",
+    "ClientSecret": "",
+    "CacheAuthToken": false,
+    "CertPath": "",
+    "SkipTLSVerification": true,
+    "UseProxy": "",
+    "FragmentSizeInKB": 390,
+    "CacheDir": "/root/.cache/qualys/qscanner",
+    "RunProfiler": false,
+    "ShowPerfStat": false,
+    "PerfStatInterval": 1000000000,
+    "MaxNetworkRetries": 10,
+    "NetworkRetryWaitMin": 5000000000,
+    "NetworkRetryWaitMax": 120000000000,
+    "PerformVersionCheck": true
+}
+2026-03-23T19:07:53.384Z	DEBUG	Version check metadata loaded from /root/.cache/qualys/qscanner/version_check_metadata.json
+2026-03-23T19:07:53.384Z	INFO	Fetching image details
+2026-03-23T19:07:53.388Z	INFO	Image source: docker
+2026-03-23T19:07:53.388Z	INFO	Image present locally. Consider using '--storage-driver docker-overlay2' for faster scan
+2026-03-23T19:07:53.388Z	DEBUG	Image ID: 2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151
+2026-03-23T19:07:53.388Z	DEBUG	Layer SHAs:
+2026-03-23T19:07:53.388Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:07:53.388Z	DEBUG	 2) b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2
+2026-03-23T19:07:53.388Z	DEBUG	 3) 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84
+2026-03-23T19:07:53.388Z	DEBUG	 4) 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89
+2026-03-23T19:07:53.388Z	DEBUG	 5) d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb
+2026-03-23T19:07:53.388Z	DEBUG	 6) db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4
+2026-03-23T19:07:53.388Z	DEBUG	 7) 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24
+2026-03-23T19:07:53.388Z	DEBUG	 8) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:07:53.388Z	DEBUG	 9) 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956
+2026-03-23T19:07:53.388Z	DEBUG	10) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:07:53.388Z	DEBUG	11) 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+2026-03-23T19:07:53.388Z	DEBUG	12) e45c63b797ea42d3f591057599011f8872da68586d493d19b13fe766736c7c7b
+2026-03-23T19:07:53.388Z	DEBUG	13) f86c5eff70d0283a1e21b790ac454e8b2b5b329b694d9a4592d6d6d78f87077b
+2026-03-23T19:07:53.388Z	DEBUG	14) 929fcfb7c5505aec32f3291bf098ce26f149865228cd154e9789f92a0b48eee9
+2026-03-23T19:07:53.388Z	DEBUG	15) 633b95028cab6d2883518e10c37991fe39c80c83094852a2354f16fac379d603
+2026-03-23T19:07:53.388Z	DEBUG	16) 1a44ef6938725dab0dad9b64cfcca0b50bfd609e22564415afc49737ae76f7e8
+2026-03-23T19:07:53.388Z	DEBUG	17) 36d4a85c83375f8a5ec64f77afd428803f50c0b4c4aa75366ba68211c64b9d00
+2026-03-23T19:07:53.388Z	DEBUG	18) 87495c69653f78d2e130cc7b225fed7b5e5c50d4baec5a0a92470abe7971f8bd
+2026-03-23T19:07:53.388Z	DEBUG	19) ef6e3e0225c257bac7d8a3acb388443490cf0da7c43fb1e1ca6019e8be6f23f9
+2026-03-23T19:07:53.388Z	DEBUG	20) 7e8aa737125da90ccc96f089fdbbdf004d5f662710995e1fa44d4294ce5f737a
+2026-03-23T19:07:53.388Z	DEBUG	21) f58e4437332869ed00cbce687c5fca44bd1d0defa215d3872e766336fe196c9a
+2026-03-23T19:07:53.388Z	DEBUG	Waiting to access local cache DB
+2026-03-23T19:07:53.390Z	DEBUG	Using local cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:07:53.390Z	DEBUG	Target [image] created for [qualys/admission-controller:latest], with following options:
+2026-03-23T19:07:53.390Z	DEBUG	Scan Options: {
+    "ScanTypes": [
+        "os",
+        "sca",
+        "fileinsight"
+    ],
+    "OutputFormats": [
+        "db",
+        "json",
+        "spdx"
+    ],
+    "ReportFormats": [
+        "table",
+        "sarif"
+    ],
+    "ExcludeDirs": [],
+    "ExcludeFiles": [],
+    "IncludeDirs": {},
+    "ScanTargetInfo": {},
+    "ShellCommands": {},
+    "ExitIfOSNotFound": false,
+    "ExitIfOSPkgNotFound": false,
+    "SecretConfigFile": "",
+    "SecretConfigRefreshDuration": 86400000000000,
+    "ForceSecretConfigRefresh": false,
+    "OfflineScan": false,
+    "SkipJavaDbUpdate": false,
+    "JavaDbUpdateIntervalInDays": 15,
+    "ScanTimeout": 300000000000,
+    "Mode": 30,
+    "PolicyTags": [],
+    "CacheType": "local",
+    "CacheCleanupDurationThreshold": 3888000000000000,
+    "CacheCleanupFrequency": 604800000000000,
+    "EnableCacheCleanup": true,
+    "DisabledSCALanguages": [],
+    "InputCacheFile": "",
+    "LimitResourceUsage": false,
+    "MultiVolume": false,
+    "MultiPartition": false,
+    "StorageDriver": "none",
+    "RegistryUsername": "",
+    "RegistryPassword": "",
+    "RegistryToken": "",
+    "AllowPartialScan": false,
+    "Platform": "",
+    "ManifestPath": "",
+    "DetectionPriority": "precise",
+    "QDSThreshold": -1,
+    "FileInsightConfigFile": "",
+    "WinRegistryConfigFile": "",
+    "MaskEnvVariables": false,
+    "ScanWritableLayerOnly": false,
+    "CollectBuildPipelineMetadata": false
+}
+2026-03-23T19:07:53.390Z	DEBUG	Registered Metadata Scanner
+2026-03-23T19:07:53.390Z	DEBUG	Registered OS Scanner
+2026-03-23T19:07:53.390Z	DEBUG	Registered SCA Scanner
+2026-03-23T19:07:53.390Z	DEBUG	Registered FileInsight Scanner
+2026-03-23T19:07:53.390Z	DEBUG	PreScan
+2026-03-23T19:07:53.390Z	DEBUG	Using built-in fileinsight-config
+2026-03-23T19:07:53.390Z	INFO	Starting Metadata scan
+2026-03-23T19:07:53.391Z	INFO	Metadata scan completed in 203.667µs
+2026-03-23T19:07:53.391Z	INFO	Starting [os sca fileinsight] scan
+2026-03-23T19:07:53.391Z	DEBUG	Base Layers:
+2026-03-23T19:07:53.391Z	DEBUG	 1) 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d
+2026-03-23T19:07:53.395Z	DEBUG	Skipping os scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:07:53.397Z	DEBUG	Skipping sca scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:07:53.400Z	DEBUG	Skipping fileinsight scan for layer b2d48bb457ee0fb4de6fde578e8b92d2156b1d1b151d1a8a3f75afdab16285f2. Already cached.
+2026-03-23T19:07:53.414Z	DEBUG	Skipping os scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:07:53.416Z	DEBUG	Skipping os scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:07:53.418Z	DEBUG	Skipping os scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:07:53.422Z	DEBUG	Skipping os scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:07:53.426Z	DEBUG	Skipping sca scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:07:53.428Z	DEBUG	Skipping sca scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:07:53.430Z	DEBUG	Skipping sca scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:07:53.432Z	DEBUG	Skipping sca scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:07:53.459Z	DEBUG	Skipping os scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:07:53.461Z	DEBUG	Skipping fileinsight scan for layer d1f51db1a191344d7e7c0d1c98fb4b8a41ef32b788b9cebd493d361714bef0eb. Already cached.
+2026-03-23T19:07:53.463Z	DEBUG	Skipping fileinsight scan for layer 27e8944f741f8e6a6e95628c8a9e7a5140f6272ed391554107e7f3eaf8d0af84. Already cached.
+2026-03-23T19:07:53.465Z	DEBUG	Skipping fileinsight scan for layer 35537a221a9252ecef4a0d6375d09bc19a5001d9f6b56e54c2283ce411e22c89. Already cached.
+2026-03-23T19:07:53.468Z	DEBUG	Skipping fileinsight scan for layer 1c251348171e28cbe0e1d5e6fcdc79b103ddc5eda0d9e3f57ceda89cecb27e0d. Already cached.
+2026-03-23T19:07:53.470Z	DEBUG	Skipping sca scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:07:53.483Z	DEBUG	Skipping fileinsight scan for layer db9e88c67db0f1ee551bc3fb5a2ff6488be48a0ebdb4fa7a14151a4c120270d4. Already cached.
+2026-03-23T19:07:53.506Z	DEBUG	Skipping os scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:07:53.508Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.517Z	DEBUG	Skipping os scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:07:53.519Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.523Z	DEBUG	Skipping sca scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:07:53.526Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.528Z	DEBUG	Skipping sca scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:07:53.530Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.532Z	DEBUG	Skipping os scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.534Z	DEBUG	Skipping fileinsight scan for layer 587c6457c6d416b0e8da160866a800bdaa1d5141c23cc79ebccbedfe5c832d24. Already cached.
+2026-03-23T19:07:53.536Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.539Z	DEBUG	Skipping fileinsight scan for layer 743a5c7fa32f6f40db22bf2201380ef23322f5c190b1f4536f52446cc5c3c956. Already cached.
+2026-03-23T19:07:53.541Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.543Z	DEBUG	Skipping sca scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.553Z	DEBUG	Skipping fileinsight scan for layer 5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef. Already cached.
+2026-03-23T19:07:53.577Z	DEBUG	Skipping os scan for layer e45c63b797ea42d3f591057599011f8872da68586d493d19b13fe766736c7c7b. Already cached.
+2026-03-23T19:07:53.579Z	DEBUG	Skipping os scan for layer f86c5eff70d0283a1e21b790ac454e8b2b5b329b694d9a4592d6d6d78f87077b. Already cached.
+2026-03-23T19:07:53.581Z	DEBUG	Skipping os scan for layer 929fcfb7c5505aec32f3291bf098ce26f149865228cd154e9789f92a0b48eee9. Already cached.
+2026-03-23T19:07:53.583Z	DEBUG	Skipping os scan for layer 633b95028cab6d2883518e10c37991fe39c80c83094852a2354f16fac379d603. Already cached.
+2026-03-23T19:07:53.599Z	DEBUG	Skipping sca scan for layer e45c63b797ea42d3f591057599011f8872da68586d493d19b13fe766736c7c7b. Already cached.
+2026-03-23T19:07:53.601Z	DEBUG	Skipping sca scan for layer f86c5eff70d0283a1e21b790ac454e8b2b5b329b694d9a4592d6d6d78f87077b. Already cached.
+2026-03-23T19:07:53.603Z	DEBUG	Skipping sca scan for layer 929fcfb7c5505aec32f3291bf098ce26f149865228cd154e9789f92a0b48eee9. Already cached.
+2026-03-23T19:07:53.605Z	DEBUG	Skipping sca scan for layer 633b95028cab6d2883518e10c37991fe39c80c83094852a2354f16fac379d603. Already cached.
+2026-03-23T19:07:53.607Z	DEBUG	Skipping os scan for layer 1a44ef6938725dab0dad9b64cfcca0b50bfd609e22564415afc49737ae76f7e8. Already cached.
+2026-03-23T19:07:53.609Z	DEBUG	Skipping fileinsight scan for layer e45c63b797ea42d3f591057599011f8872da68586d493d19b13fe766736c7c7b. Already cached.
+2026-03-23T19:07:53.611Z	DEBUG	Skipping fileinsight scan for layer f86c5eff70d0283a1e21b790ac454e8b2b5b329b694d9a4592d6d6d78f87077b. Already cached.
+2026-03-23T19:07:53.623Z	DEBUG	Skipping fileinsight scan for layer 929fcfb7c5505aec32f3291bf098ce26f149865228cd154e9789f92a0b48eee9. Already cached.
+2026-03-23T19:07:53.625Z	DEBUG	Skipping fileinsight scan for layer 633b95028cab6d2883518e10c37991fe39c80c83094852a2354f16fac379d603. Already cached.
+2026-03-23T19:07:53.627Z	DEBUG	Skipping sca scan for layer 1a44ef6938725dab0dad9b64cfcca0b50bfd609e22564415afc49737ae76f7e8. Already cached.
+2026-03-23T19:07:53.643Z	DEBUG	Skipping fileinsight scan for layer 1a44ef6938725dab0dad9b64cfcca0b50bfd609e22564415afc49737ae76f7e8. Already cached.
+2026-03-23T19:07:53.684Z	DEBUG	Skipping os scan for layer 36d4a85c83375f8a5ec64f77afd428803f50c0b4c4aa75366ba68211c64b9d00. Already cached.
+2026-03-23T19:07:53.686Z	DEBUG	Skipping os scan for layer 87495c69653f78d2e130cc7b225fed7b5e5c50d4baec5a0a92470abe7971f8bd. Already cached.
+2026-03-23T19:07:53.688Z	DEBUG	Skipping os scan for layer ef6e3e0225c257bac7d8a3acb388443490cf0da7c43fb1e1ca6019e8be6f23f9. Already cached.
+2026-03-23T19:07:53.691Z	DEBUG	Skipping os scan for layer 7e8aa737125da90ccc96f089fdbbdf004d5f662710995e1fa44d4294ce5f737a. Already cached.
+2026-03-23T19:07:53.696Z	DEBUG	Skipping sca scan for layer 36d4a85c83375f8a5ec64f77afd428803f50c0b4c4aa75366ba68211c64b9d00. Already cached.
+2026-03-23T19:07:53.716Z	DEBUG	Skipping sca scan for layer 87495c69653f78d2e130cc7b225fed7b5e5c50d4baec5a0a92470abe7971f8bd. Already cached.
+2026-03-23T19:07:53.719Z	DEBUG	Skipping sca scan for layer ef6e3e0225c257bac7d8a3acb388443490cf0da7c43fb1e1ca6019e8be6f23f9. Already cached.
+2026-03-23T19:07:53.737Z	DEBUG	Skipping sca scan for layer 7e8aa737125da90ccc96f089fdbbdf004d5f662710995e1fa44d4294ce5f737a. Already cached.
+2026-03-23T19:07:53.739Z	DEBUG	Skipping os scan for layer f58e4437332869ed00cbce687c5fca44bd1d0defa215d3872e766336fe196c9a. Already cached.
+2026-03-23T19:07:53.741Z	DEBUG	Skipping fileinsight scan for layer 36d4a85c83375f8a5ec64f77afd428803f50c0b4c4aa75366ba68211c64b9d00. Already cached.
+2026-03-23T19:07:53.747Z	DEBUG	Skipping fileinsight scan for layer 87495c69653f78d2e130cc7b225fed7b5e5c50d4baec5a0a92470abe7971f8bd. Already cached.
+2026-03-23T19:07:53.749Z	DEBUG	Skipping fileinsight scan for layer ef6e3e0225c257bac7d8a3acb388443490cf0da7c43fb1e1ca6019e8be6f23f9. Already cached.
+2026-03-23T19:07:53.754Z	DEBUG	Skipping fileinsight scan for layer 7e8aa737125da90ccc96f089fdbbdf004d5f662710995e1fa44d4294ce5f737a. Already cached.
+2026-03-23T19:07:53.756Z	DEBUG	Skipping sca scan for layer f58e4437332869ed00cbce687c5fca44bd1d0defa215d3872e766336fe196c9a. Already cached.
+2026-03-23T19:07:53.767Z	DEBUG	Skipping fileinsight scan for layer f58e4437332869ed00cbce687c5fca44bd1d0defa215d3872e766336fe196c9a. Already cached.
+2026-03-23T19:07:53.793Z	INFO	[os sca fileinsight] scan completed in 402.333525ms
+2026-03-23T19:07:53.794Z	INFO	OS detected: Oracle Enterprise Linux 8.10
+2026-03-23T19:07:53.794Z	INFO	OS package(s) detected: 162
+2026-03-23T19:07:53.794Z	INFO	Technologies detected (1): [Go]
+2026-03-23T19:07:53.794Z	INFO	Language package(s) detected: 115
+2026-03-23T19:07:53.795Z	INFO	FileInsight findings: 0
+2026-03-23T19:07:53.795Z	INFO	All scans completed in 404.17501ms
+2026-03-23T19:07:53.795Z	DEBUG	Cache cleanup frequency is 168h0m0s. Last cleanup was performed 17h37m4.006222614s ago.
+2026-03-23T19:07:53.795Z	DEBUG	Cache cleanup not required
+2026-03-23T19:07:53.795Z	DEBUG	Closing cache /root/.cache/qualys/qscanner/qscanner_cache.db
+2026-03-23T19:07:53.795Z	DEBUG	PostScan
+2026-03-23T19:07:53.796Z	DEBUG	Registered JSON Result Output Handler
+2026-03-23T19:07:53.796Z	DEBUG	Registered SPDX Handler
+2026-03-23T19:07:53.796Z	DEBUG	Registered Changelist Output Handler
+2026-03-23T19:07:53.798Z	INFO	Scan Result JSON created at /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ScanResult.json
+2026-03-23T19:07:53.808Z	INFO	SPDX document created at /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ScanResult.spdx.json
+2026-03-23T19:07:53.849Z	DEBUG	Compressed SBOM created at /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ScanResult.spdx.json.xz
+2026-03-23T19:07:53.849Z	INFO	Uploading SBOM /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ScanResult.spdx.json.xz
+2026-03-23T19:07:53.849Z	INFO	Access token expiring on 2027-02-08 05:55:34 +0000 UTC
+2026-03-23T19:07:53.849Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:07:53.849Z	DEBUG	Uploading fragment #1 of 25525 bytes
+2026-03-23T19:07:53.849Z	DEBUG	Finalizing upload
+2026-03-23T19:07:53.849Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:53.849Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:53.849Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/sbom/customer/0631dbea-f39c-6263-820b-2ddf4cd9c95b/image/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151/fragment/1/finalize
+2026-03-23T19:07:54.280Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:54.294Z	DEBUG	Bytes uploaded: 25525
+2026-03-23T19:07:54.294Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:07:54.294Z	DEBUG	Total bytes uploaded: 25525
+2026-03-23T19:07:54.294Z	INFO	SBOM uploaded successfully
+2026-03-23T19:07:54.295Z	INFO	Creating changelist
+2026-03-23T19:07:54.295Z	DEBUG	Creating Metadata table
+2026-03-23T19:07:54.313Z	DEBUG	Metadata table created in 18.058977ms
+2026-03-23T19:07:54.313Z	DEBUG	Creating AgentInfo table
+2026-03-23T19:07:54.332Z	DEBUG	AgentInfo table created in 18.730809ms
+2026-03-23T19:07:54.332Z	DEBUG	Creating UnixCommand table
+2026-03-23T19:07:54.350Z	DEBUG	UnixCommand table created in 18.116484ms
+2026-03-23T19:07:54.350Z	DEBUG	Creating InstalledSoftware table
+2026-03-23T19:07:54.373Z	DEBUG	InstalledSoftware table created in 23.491505ms
+2026-03-23T19:07:54.373Z	DEBUG	Creating SCASoftwareInfo table
+2026-03-23T19:07:54.393Z	DEBUG	SCASoftwareInfo table created in 19.529275ms
+2026-03-23T19:07:54.393Z	DEBUG	Creating SCATechnologiesDetected table
+2026-03-23T19:07:54.412Z	DEBUG	SCATechnologiesDetected table created in 18.874826ms
+2026-03-23T19:07:54.412Z	DEBUG	Creating SCAInstalledSoftwareMap table
+2026-03-23T19:07:54.430Z	DEBUG	SCAInstalledSoftwareMap table created in 18.17058ms
+2026-03-23T19:07:54.430Z	DEBUG	Creating LayerInfo table
+2026-03-23T19:07:54.448Z	DEBUG	LayerInfo table created in 17.889329ms
+2026-03-23T19:07:54.448Z	DEBUG	Changelist DB created at /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ChangeList.db
+2026-03-23T19:07:54.481Z	INFO	Compressed Changelist DB created at /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ChangeList.db.xz
+2026-03-23T19:07:54.481Z	DEBUG	Original changelist removed
+2026-03-23T19:07:54.481Z	INFO	Uploading changelist /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-ChangeList.db.xz
+2026-03-23T19:07:54.481Z	DEBUG	Uploading in chunks with fragment size: 399360 bytes
+2026-03-23T19:07:54.482Z	DEBUG	Uploading fragment #1 of 25332 bytes
+2026-03-23T19:07:54.482Z	DEBUG	Finalizing upload
+2026-03-23T19:07:54.482Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:54.482Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:54.482Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/asset/image/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151/snapshot/970438d0-9327-4c88-b9c3-c1a791475f44/fragment/1/finalize
+2026-03-23T19:07:54.912Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:54.925Z	DEBUG	Bytes uploaded: 25332
+2026-03-23T19:07:54.925Z	DEBUG	Chunk #1 uploaded
+2026-03-23T19:07:54.925Z	DEBUG	Total bytes uploaded: 25332
+2026-03-23T19:07:54.925Z	DEBUG	Publish on Kafka
+2026-03-23T19:07:54.926Z	DEBUG	SSM Task details:
+{
+    "SSMTaskDetails": {
+        "AssetUUID": "2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151",
+        "SnapshotUUID": "970438d0-9327-4c88-b9c3-c1a791475f44",
+        "SnapshotPath": "cms/cli/image/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151/970438d0-9327-4c88-b9c3-c1a791475f44",
+        "SnapshotBucket": "cs-ssm-delta-snapshot",
+        "RequestId": "f885bf0e-2fa4-45e4-87df-a1208243ecc0",
+        "Platform": "LINUX_SENSOR",
+        "ManifestType": "Vulnerability",
+        "CompressionTechnique": "LZMA",
+        "Source": "qscanner"
+    }
+}
+2026-03-23T19:07:54.926Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:07:54.926Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:07:54.926Z	DEBUG	POST https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/ssm/task/publish
+2026-03-23T19:07:55.160Z	DEBUG	Response status: 200 OK
+2026-03-23T19:07:55.160Z	INFO	Changelist uploaded successfully
+2026-03-23T19:07:55.160Z	DEBUG	Registered Inventory reporter
+2026-03-23T19:07:55.160Z	DEBUG	Registered Vulnerability reporter
+2026-03-23T19:07:55.160Z	INFO	Skip fetching of policy evaluation result
+2026-03-23T19:07:55.160Z	INFO	Fetching vulnerability report
+2026-03-23T19:08:10.160Z	DEBUG	Skipping Secure TLS verification
+2026-03-23T19:08:10.160Z	DEBUG	Creating new HTTP Client
+2026-03-23T19:08:10.160Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151/vuln?imageFilter=lastScanned%3A%5Bnow-18s+..+now%5D
+2026-03-23T19:08:10.434Z	DEBUG	Response status: 404 Not Found
+2026-03-23T19:08:10.434Z	DEBUG	Vuln report not yet available
+2026-03-23T19:08:10.434Z	INFO	Status: [404 Not Found]. Retrying in 5s. (attempt 1/10)
+2026-03-23T19:08:15.438Z	DEBUG	GET https://gateway.qg1.apps.qualys.com/cms/cli/v1.0/image/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151/vuln?imageFilter=lastScanned%3A%5Bnow-23s+..+now%5D
+2026-03-23T19:08:15.597Z	DEBUG	Response status: 200 OK
+2026-03-23T19:08:15.651Z	INFO	Vulnerability report received
+2026-03-23T19:08:15.651Z	INFO	20 vulnerabilities found!
+2026-03-23T19:08:15.651Z	INFO	  Severity 5: 0
+2026-03-23T19:08:15.651Z	INFO	  Severity 4: 13
+2026-03-23T19:08:15.651Z	INFO	  Severity 3: 7
+2026-03-23T19:08:15.651Z	INFO	  Severity 2: 0
+2026-03-23T19:08:15.651Z	INFO	  Severity 1: 0
+
+Vulnerabilities:
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+|            SOFTWARE NAME            |   QID   | QDS | VULN AGE |     CVE(S)     |  INSTALLED VERSION   |    FIXED VERSION     |               SUMMARY               |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| brotli                              | 163986  | 42  | 39 days  | CVE-2025-6176  | 1.0.6-3.el8          | 1.0.6-4.el8_10       | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for brotli          |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-2389)                    |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| github.com/docker/docker            | 5004822 | 30  | 236 days | CVE-2025-54388 | v28.3.2+incompatible | 28.3.3               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | github.com/docker/docker            |
+|                                     |         |     |          |                |                      |                      | (GHSA-x4rx-4gw3-53p4)               |
++-------------------------------------+---------+     +----------+----------------+----------------------+----------------------+-------------------------------------+
+| github.com/go-viper/mapstructure/v2 | 5005105 |     | 209 days | CVE-2025-11065 | v2.2.1               | 2.4.0                | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | github.com/go-viper/mapstructure/v2 |
+|                                     |         |     |          |                |                      |                      | (GHSA-2464-8j7c-4cjm)               |
++                                     +---------+-----+----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5004527 | -   | 266 days |                |                      | 2.3.0                | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | github.com/go-viper/mapstructure/v2 |
+|                                     |         |     |          |                |                      |                      | (GHSA-fv92-fjc5-jj9h)               |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| github.com/ulikunitz/xz             | 5005228 | 30  | 202 days | CVE-2025-58058 | v0.5.12              | 0.5.15               | Go (Go) Security Update             |
+|                                     |         |     |          |                |                      |                      | for github.com/ulikunitz/xz         |
+|                                     |         |     |          |                |                      |                      | (GHSA-jc7w-c686-c4v9)               |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| glib2                               | 163878  | 42  | 55 days  | CVE-2025-13601 | 2.56.4-167.el8_10    | 2.56.4-168.el8_10    | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for glib2           |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-0991)                    |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| gnupg2                              | 163846  | 35  | 63 days  | CVE-2025-68973 | 2.2.20-3.el8_6       | 2.2.20-4.el8_10      | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for gnupg2          |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-0728)                    |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| golang.org/x/crypto                 | 5006267 | 30  | 123 days | CVE-2025-58181 | v0.40.0              | 0.45.0               | Go (Go) Security Update             |
+|                                     |         |     |          |                |                      |                      | for golang.org/x/crypto             |
+|                                     |         |     |          |                |                      |                      | (GHSA-j5w8-q4qc-rx2x)               |
++                                     +---------+     +          +----------------+                      +                      +-------------------------------------+
+|                                     | 5006272 |     |          | CVE-2025-47914 |                      |                      | Go (Go) Security Update             |
+|                                     |         |     |          |                |                      |                      | for golang.org/x/crypto             |
+|                                     |         |     |          |                |                      |                      | (GHSA-f6x5-jh6r-wrfv)               |
++-------------------------------------+---------+     +----------+----------------+----------------------+----------------------+-------------------------------------+
+| libblkid                            | 163952  |     | 42 days  | CVE-2025-14104 | 2.32.1-47.0.1.el8_10 | 2.32.1-48.0.1.el8_10 | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for util-linux      |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-1852)                    |
++-------------------------------------+         +     +          +                +                      +                      +                                     +
+| libfdisk                            |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
++-------------------------------------+         +     +          +                +                      +                      +                                     +
+| libmount                            |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
++-------------------------------------+         +     +          +                +                      +                      +                                     +
+| libsmartcols                        |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
++-------------------------------------+         +     +          +                +                      +                      +                                     +
+| libuuid                             |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
+|                                     |         |     |          |                |                      |                      |                                     |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| openssl-libs                        | 164051  | 35  | 26 days  | CVE-2025-69419 | 1.1.1k-14.el8_10     | 1.1.1k-15.el8_6      | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for Open            |
+|                                     |         |     |          |                |                      |                      | Secure Sockets Layer (OpenSSL)      |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-3042)                    |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| stdlib                              | 5007494 | 72  | 45 days  | CVE-2025-68121 | v1.25.3              | 1.25.7               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4337)               |
++                                     +---------+-----+----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5007268 | 37  | 53 days  | CVE-2025-61728 |                      | 1.25.6               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4342)               |
++                                     +---------+-----+----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5006430 | 35  | 108 days | CVE-2025-61729 |                      | 1.25.5               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2025-4155)               |
++                                     +---------+     +----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5008844 |     | 12 days  | CVE-2026-25679 |                      | 1.25.8               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4601)               |
++                                     +---------+     +----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5007266 |     | 53 days  | CVE-2025-61726 |                      | 1.25.6               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4341)               |
++                                     +---------+-----+          +----------------+                      +                      +-------------------------------------+
+|                                     | 5007264 | 30  |          | CVE-2025-61730 |                      |                      | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4340)               |
++                                     +---------+     +----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5006453 |     | 108 days | CVE-2025-61727 |                      | 1.25.5               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2025-4175)               |
++                                     +---------+     +----------+----------------+                      +----------------------+-------------------------------------+
+|                                     | 5008848 |     | 12 days  | CVE-2026-27142 |                      | 1.25.8               | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4603)               |
++                                     +---------+-----+          +----------------+                      +                      +-------------------------------------+
+|                                     | 5008845 | 20  |          | CVE-2026-27139 |                      |                      | Go (Go) Security Update for         |
+|                                     |         |     |          |                |                      |                      | stdlib (GO-2026-4602)               |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+| util-linux                          | 163952  | 30  | 42 days  | CVE-2025-14104 | 2.32.1-47.0.1.el8_10 | 2.32.1-48.0.1.el8_10 | Oracle Enterprise Linux             |
+|                                     |         |     |          |                |                      |                      | Security Update for util-linux      |
+|                                     |         |     |          |                |                      |                      | (ELSA-2026-1852)                    |
++-------------------------------------+---------+-----+----------+----------------+----------------------+----------------------+-------------------------------------+
+2026-03-23T19:08:15.660Z	INFO	For more details refer /root/qualys/qscanner/data/2b3d1008bd9703c807c6c84e3ed490c5fc3b381bdd2e8891efc695fc82d57151-Report.sarif.json
+2026-03-23T19:08:15.660Z	INFO	Skipping policy evaluation
+2026-03-23T19:08:15.660Z	DEBUG	Cleaning up scan target
+</pre></details>
             </div>
         </div>
         
 
     <div class="footer">
-        Qualys Image Scanner &mdash; Trivy + QScanner &mdash; Report generated on 2026-03-23 18:54:17 UTC
+        Qualys Image Scanner &mdash; Trivy + QScanner &mdash; Report generated on 2026-03-23 19:08:15 UTC
     </div>
 </body>
 </html>
